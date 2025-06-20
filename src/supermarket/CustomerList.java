@@ -4,6 +4,12 @@
  */
 package supermarket;
 
+import java.awt.event.KeyEvent;
+import java.sql.*;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author android1
@@ -15,6 +21,15 @@ public class CustomerList extends javax.swing.JFrame {
      */
     public CustomerList() {
         initComponents();
+
+        setResizable(false);
+        loadUsersIntoTable();
+
+        Refreshbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loadUsersIntoTable();
+            }
+        });
     }
 
     /**
@@ -26,9 +41,24 @@ public class CustomerList extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        CustomerListTable = new javax.swing.JTable();
-        Home_back = new javax.swing.JLabel();
+        Jtable_Users = new javax.swing.JTable();
+        btnSrc = new javax.swing.JButton();
+        btnEdit = new javax.swing.JButton();
+        btnDelete1 = new javax.swing.JButton();
+        btnDelete = new javax.swing.JButton();
+        srchbyCategory = new javax.swing.JTextField();
+        JcomboBox1 = new javax.swing.JComboBox<>();
+        jLabel16 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        totalCstlbl = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        Refreshbtn = new javax.swing.JButton();
+        jLabel18 = new javax.swing.JLabel();
+        back = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -38,7 +68,19 @@ public class CustomerList extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        CustomerListTable.setModel(new javax.swing.table.DefaultTableModel(
+        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("JetBrainsMono NF ExtraBold", 0, 48)); // NOI18N
+        jLabel1.setText("Customer Lists");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 550, 120));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-customer-100.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 100, 120));
+
+        Jtable_Users.setBorder(new javax.swing.border.MatteBorder(null));
+        Jtable_Users.setFont(new java.awt.Font("Space Mono", 0, 14)); // NOI18N
+        Jtable_Users.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
                 {},
@@ -49,45 +91,429 @@ public class CustomerList extends javax.swing.JFrame {
 
             }
         ));
-        jScrollPane1.setViewportView(CustomerListTable);
+        jScrollPane1.setViewportView(Jtable_Users);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 680, 530));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 1450, 600));
 
-        Home_back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-back-100.png"))); // NOI18N
-        Home_back.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Home_back.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Home_backMouseClicked(evt);
+        btnSrc.setFont(new java.awt.Font("JetBrains Mono", 0, 20)); // NOI18N
+        btnSrc.setText("Search");
+        btnSrc.setBorder(new javax.swing.border.MatteBorder(null));
+        btnSrc.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSrc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSrcActionPerformed(evt);
             }
         });
-        getContentPane().add(Home_back, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 390, 110, 140));
+        btnSrc.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnSrcKeyPressed(evt);
+            }
+        });
+        jPanel1.add(btnSrc, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 170, 140, 40));
+
+        btnEdit.setFont(new java.awt.Font("JetBrains Mono", 0, 20)); // NOI18N
+        btnEdit.setText("Edit");
+        btnEdit.setBorder(new javax.swing.border.MatteBorder(null));
+        btnEdit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditActionPerformed(evt);
+            }
+        });
+        btnEdit.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnEditKeyPressed(evt);
+            }
+        });
+        jPanel1.add(btnEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 170, 140, 40));
+
+        btnDelete1.setFont(new java.awt.Font("JetBrains Mono", 0, 20)); // NOI18N
+        btnDelete1.setText("Delete");
+        btnDelete1.setBorder(new javax.swing.border.MatteBorder(null));
+        btnDelete1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnDelete1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDelete1ActionPerformed(evt);
+            }
+        });
+        btnDelete1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnDelete1KeyPressed(evt);
+            }
+        });
+        jPanel1.add(btnDelete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 170, 140, 40));
+
+        btnDelete.setFont(new java.awt.Font("JetBrains Mono", 0, 20)); // NOI18N
+        btnDelete.setText("Reset");
+        btnDelete.setBorder(new javax.swing.border.MatteBorder(null));
+        btnDelete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
+        btnDelete.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnDeleteKeyPressed(evt);
+            }
+        });
+        jPanel1.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 170, 140, 40));
+
+        srchbyCategory.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
+        srchbyCategory.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                srchbyCategoryKeyPressed(evt);
+            }
+        });
+        jPanel1.add(srchbyCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 100, 380, 40));
+
+        JcomboBox1.setFont(new java.awt.Font("JetBrains Mono", 0, 18)); // NOI18N
+        JcomboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Username", "Father Name", "Contact Number" }));
+        JcomboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(JcomboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 100, 170, 40));
+
+        jLabel16.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
+        jLabel16.setText("Save file to:");
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, 30));
+
+        jButton1.setFont(new java.awt.Font("JetBrains Mono", 0, 20)); // NOI18N
+        jButton1.setText("Save");
+        jButton1.setBorder(new javax.swing.border.MatteBorder(null));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 220, 140, 40));
+
+        totalCstlbl.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
+        totalCstlbl.setText("Total Customers:");
+        jPanel1.add(totalCstlbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 230, -1, 30));
+
+        jComboBox1.setFont(new java.awt.Font("JetBrains Mono", 0, 18)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Excel", "CSV" }));
+        jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 260, -1));
+
+        Refreshbtn.setFont(new java.awt.Font("JetBrains Mono", 0, 20)); // NOI18N
+        Refreshbtn.setText("Refresh");
+        Refreshbtn.setBorder(new javax.swing.border.MatteBorder(null));
+        Refreshbtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(Refreshbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 170, 140, 40));
+
+        jLabel18.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
+        jLabel18.setText("Search by:");
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 100, -1, 30));
+
+        back.setFont(new java.awt.Font("JetBrains Mono", 0, 18)); // NOI18N
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-back-48 (1).png"))); // NOI18N
+        back.setText("Back");
+        back.setBorder(new javax.swing.border.MatteBorder(null));
+        back.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backMouseClicked(evt);
+            }
+        });
+        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 10, 120, 60));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1450, 870));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        // TODO add your handling code here:
-        
-        Helper.Tools.setCenter(this);
-        
-        
-        DAL d = new DAL();
-        
-        
-        Object[][] customer = d.select("Select * from customer");
-        
-        String[] columnName = {"ID","Name","Balance"};
-        
-      CustomerListTable.setModel(new javax.swing.table.DefaultTableModel( customer, columnName));
+    public void loadUsersIntoTable() {
+        DefaultTableModel model = new DefaultTableModel(
+                new Object[]{"ID", "Username", "Father Name", "Email", "Gender", "Contact", "Balance"}, 0
+        ) {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false; // Make all cells non-editable
+            }
+        };
 
-        
+        try {
+            Connection con = DriverManager.getConnection(
+                    "jdbc:mariadb://localhost:3306/supermarket", "root", "");
+
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT user_id, username, email, gender, contact_number, fathername, balance FROM users");
+
+            while (rs.next()) {
+                model.addRow(new Object[]{
+                    rs.getInt("user_id"),
+                    rs.getString("username"),
+                    rs.getString("fathername"),
+                    rs.getString("email"),
+                    rs.getString("gender"),
+                    rs.getString("contact_number"),
+                    rs.getBigDecimal("balance")
+                });
+            }
+
+            Jtable_Users.setModel(model);
+            totalCstlbl.setText("Total Customers: " + Jtable_Users.getRowCount());
+            con.close();
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            javax.swing.JOptionPane.showMessageDialog(this, "Error loading users: " + ex.getMessage());
+        }
+    }
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        Helper.Tools.setCenter(this);
+        loadUsersIntoTable();
     }//GEN-LAST:event_formWindowOpened
 
-    private void Home_backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Home_backMouseClicked
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        srchbyCategory.setText("");
+    }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void btnDeleteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnDeleteKeyPressed
         // TODO add your handling code here:
-        new Home().setVisible(true);
+    }//GEN-LAST:event_btnDeleteKeyPressed
+
+    private void btnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditActionPerformed
+        int selectedRow = Jtable_Users.getSelectedRow();
+        if (selectedRow == -1) {
+            JOptionPane.showMessageDialog(this, "Please select a row to edit.");
+            return;
+        }
+        DefaultTableModel model = (DefaultTableModel) Jtable_Users.getModel();
+        int userId = (int) model.getValueAt(selectedRow, 0);
+        String username = (String) model.getValueAt(selectedRow, 1);
+        String fatherName = (String) model.getValueAt(selectedRow, 2);
+        String email = (String) model.getValueAt(selectedRow, 3);
+        String gender = (String) model.getValueAt(selectedRow, 4);
+        String contact = (String) model.getValueAt(selectedRow, 5);
+        String balance = model.getValueAt(selectedRow, 6).toString();
+
+        // Show a dialog with editable fields pre-filled
+        JTextField usernameField = new JTextField(username);
+        JTextField fatherNameField = new JTextField(fatherName);
+        JTextField emailField = new JTextField(email);
+        JTextField genderField = new JTextField(gender);
+        JTextField contactField = new JTextField(contact);
+        JTextField balanceField = new JTextField(balance);
+
+        Object[] message = {
+            "Username:", usernameField,
+            "Father Name:", fatherNameField,
+            "Email:", emailField,
+            "Gender:", genderField,
+            "Contact:", contactField,
+            "Balance:", balanceField
+        };
+
+        int option = JOptionPane.showConfirmDialog(this, message, "Edit Customer", JOptionPane.OK_CANCEL_OPTION);
+        if (option == JOptionPane.OK_OPTION) {
+            // Save changes to DB
+            try {
+                Connection con = DriverManager.getConnection(
+                        "jdbc:mariadb://localhost:3306/supermarket", "root", "");
+                String sql = "UPDATE users SET username=?, fathername=?, email=?, gender=?, contact_number=?, balance=? WHERE user_id=?";
+                PreparedStatement ps = con.prepareStatement(sql);
+                ps.setString(1, usernameField.getText());
+                ps.setString(2, fatherNameField.getText());
+                ps.setString(3, emailField.getText());
+                ps.setString(4, genderField.getText());
+                ps.setString(5, contactField.getText());
+                ps.setBigDecimal(6, new java.math.BigDecimal(balanceField.getText()));
+                ps.setInt(7, userId);
+                ps.executeUpdate();
+                con.close();
+                // Reload table with updated data
+                loadUsersIntoTable();
+                JOptionPane.showMessageDialog(this, "Customer updated successfully!");
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                JOptionPane.showMessageDialog(this, "Update failed: " + ex.getMessage());
+            }
+        }
+    }//GEN-LAST:event_btnEditActionPerformed
+
+    private void btnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnEditKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEditKeyPressed
+
+    private void srchbyCategoryKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_srchbyCategoryKeyPressed
+        // TODO add your handling code here:
+
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            btnSrc.doClick();
+        }
+    }//GEN-LAST:event_srchbyCategoryKeyPressed
+
+    private void btnSrcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSrcActionPerformed
+        String selectedCategory = (String) JcomboBox1.getSelectedItem();
+        String searchText = srchbyCategory.getText();
+        String column = "";
+
+        switch (selectedCategory) {
+            case "ID":
+                column = "user_id";
+                break;
+            case "Username":
+                column = "username";
+                break;
+            case "Father Name":
+                column = "fathername";
+                break;
+            case "Contact Number":
+                column = "contact_number";
+                break;
+        }
+
+        DefaultTableModel model = new DefaultTableModel(
+                new Object[]{"ID", "Username", "Father Name", "Email", "Gender", "Contact", "Balance"}, 0
+        ) {
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
+
+        try {
+            Connection con = DriverManager.getConnection(
+                    "jdbc:mariadb://localhost:3306/supermarket", "root", "");
+            String sql = "SELECT user_id, username, fathername, email, gender, contact_number, balance FROM users WHERE " + column + " LIKE ?";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, "%" + searchText + "%");
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                model.addRow(new Object[]{
+                    rs.getInt("user_id"),
+                    rs.getString("username"),
+                    rs.getString("fathername"),
+                    rs.getString("email"),
+                    rs.getString("gender"),
+                    rs.getString("contact_number"),
+                    rs.getBigDecimal("balance")
+                });
+            }
+            Jtable_Users.setModel(model);
+            // Show message if no results
+            if (model.getRowCount() == 0) {
+                JOptionPane.showMessageDialog(this, "No customer found for your search.", "Search Result", JOptionPane.INFORMATION_MESSAGE);
+            }
+            con.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Search error: " + ex.getMessage());
+        }
+    }//GEN-LAST:event_btnSrcActionPerformed
+
+    private void btnSrcKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnSrcKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSrcKeyPressed
+
+    private void btnDelete1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDelete1ActionPerformed
+        int selectedRow = Jtable_Users.getSelectedRow();
+        if (selectedRow == -1) {
+            JOptionPane.showMessageDialog(this, "Please select a row to delete.");
+            return;
+        }
+
+        DefaultTableModel model = (DefaultTableModel) Jtable_Users.getModel();
+        int userId = (int) model.getValueAt(selectedRow, 0);
+
+        // Confirm deletion
+        int confirm = JOptionPane.showConfirmDialog(this,
+                "Are you sure you want to delete this user?",
+                "Confirm Delete",
+                JOptionPane.YES_NO_OPTION);
+
+        if (confirm == JOptionPane.YES_OPTION) {
+            try {
+                Connection con = DriverManager.getConnection(
+                        "jdbc:mariadb://localhost:3306/supermarket", "root", "");
+                String sql = "DELETE FROM users WHERE user_id=?";
+                PreparedStatement ps = con.prepareStatement(sql);
+                ps.setInt(1, userId);
+                ps.executeUpdate();
+                con.close();
+
+                // Refresh table from database
+                loadUsersIntoTable();
+                JOptionPane.showMessageDialog(this, "User deleted successfully!");
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                JOptionPane.showMessageDialog(this, "Delete failed: " + ex.getMessage());
+            }
+        }
+    }//GEN-LAST:event_btnDelete1ActionPerformed
+
+    private void btnDelete1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnDelete1KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDelete1KeyPressed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String selectedFormat = (String) jComboBox1.getSelectedItem();
+        DefaultTableModel model = (DefaultTableModel) Jtable_Users.getModel();
+        javax.swing.JFileChooser fc = new javax.swing.JFileChooser();
+
+        // Set default file name and file filter based on format
+        String defaultFileName = "customers";
+        javax.swing.filechooser.FileNameExtensionFilter filter = null;
+        if ("Excel".equals(selectedFormat)) {
+            defaultFileName += ".xlsx";
+            filter = new javax.swing.filechooser.FileNameExtensionFilter("Excel Files (*.xlsx)", "xlsx");
+        } else if ("CSV".equals(selectedFormat)) {
+            defaultFileName += ".csv";
+            filter = new javax.swing.filechooser.FileNameExtensionFilter("CSV Files (*.csv)", "csv");
+        }
+        fc.setSelectedFile(new java.io.File(defaultFileName));
+        if (filter != null) {
+            fc.resetChoosableFileFilters();
+            fc.setFileFilter(filter);
+        }
+
+        int ret = fc.showSaveDialog(this);
+        if (ret == javax.swing.JFileChooser.APPROVE_OPTION) {
+            java.io.File file = fc.getSelectedFile();
+            String lowerName = file.getName().toLowerCase();
+
+            // Add the correct extension if necessary
+            if ("CSV".equals(selectedFormat) && !lowerName.endsWith(".csv")) {
+                file = new java.io.File(file.getAbsolutePath() + ".csv");
+            }
+            if ("Excel".equals(selectedFormat) && !lowerName.endsWith(".xlsx")) {
+                file = new java.io.File(file.getAbsolutePath() + ".xlsx");
+            }
+
+            try (java.io.PrintWriter pw = new java.io.PrintWriter(file)) {
+                // Write header
+                for (int i = 0; i < model.getColumnCount(); i++) {
+                    pw.print(model.getColumnName(i));
+                    if (i < model.getColumnCount() - 1) {
+                        pw.print(",");
+                    }
+                }
+                pw.println();
+                // Write data
+                for (int row = 0; row < model.getRowCount(); row++) {
+                    for (int col = 0; col < model.getColumnCount(); col++) {
+                        pw.print(model.getValueAt(row, col));
+                        if (col < model.getColumnCount() - 1) {
+                            pw.print(",");
+                        }
+                    }
+                    pw.println();
+                }
+                JOptionPane.showMessageDialog(this, "Data saved to " + file.getAbsolutePath());
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                JOptionPane.showMessageDialog(this, "Save failed: " + ex.getMessage());
+            }
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
+        // TODO add your handling code here:
+
+        new CustomerInformation().setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_Home_backMouseClicked
+    }//GEN-LAST:event_backMouseClicked
 
     /**
      * @param args the command line arguments
@@ -125,8 +551,23 @@ public class CustomerList extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable CustomerListTable;
-    private javax.swing.JLabel Home_back;
+    private javax.swing.JComboBox<String> JcomboBox1;
+    private javax.swing.JTable Jtable_Users;
+    private javax.swing.JButton Refreshbtn;
+    private javax.swing.JLabel back;
+    private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btnDelete1;
+    private javax.swing.JButton btnEdit;
+    private javax.swing.JButton btnSrc;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField srchbyCategory;
+    private javax.swing.JLabel totalCstlbl;
     // End of variables declaration//GEN-END:variables
 }

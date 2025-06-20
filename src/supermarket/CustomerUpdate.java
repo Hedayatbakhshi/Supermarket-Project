@@ -4,19 +4,52 @@
  */
 package supermarket;
 
+import java.awt.event.KeyEvent;
+import java.sql.*;
+import javax.swing.JOptionPane;
+import org.mindrot.jbcrypt.BCrypt;
+
 /**
  *
  * @author android1
  */
 public class CustomerUpdate extends javax.swing.JFrame {
 
+    private javax.swing.ButtonGroup genderButtonGroup;
+
     /**
      * Creates new form CustomerAdd
      */
     public CustomerUpdate() {
         initComponents();
-         
+
+        setResizable(false);
+//                 // Show a tip message when the window opens
+//    javax.swing.SwingUtilities.invokeLater(() -> {
+//        javax.swing.JOptionPane.showMessageDialog(this, 
+//            "Tip: Enter the customer ID and press the search icon to find a customer.",
+//            "Customer Update Tip",
+//            javax.swing.JOptionPane.INFORMATION_MESSAGE);
+//    });
+
+        genderButtonGroup = new javax.swing.ButtonGroup();
+        genderButtonGroup.add(radiobtn_male);
+        genderButtonGroup.add(radiobtn_female);
+
+        showpasswordBOX.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                if (showpasswordBOX.isSelected()) {
+                    password_field.setEchoChar((char) 0);
+                    confirmPassword_field.setEchoChar((char) 0);
+                } else {
+                    password_field.setEchoChar('\u2022');
+                    confirmPassword_field.setEchoChar('\u2022');
+                }
+            }
+        });
     }
+
+    DAL dal = new DAL();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,25 +60,34 @@ public class CustomerUpdate extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        backbtn = new javax.swing.JButton();
+        jLabel17 = new javax.swing.JLabel();
         searchID_txtfield = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
         searchlbl_gif = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
         customerName_field = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        fatherName_field = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
         password_field = new javax.swing.JPasswordField();
+        jLabel13 = new javax.swing.JLabel();
         confirmPassword_field = new javax.swing.JPasswordField();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
         email_field = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        contactNumber_field = new javax.swing.JTextField();
+        jLabel21 = new javax.swing.JLabel();
         radiobtn_male = new javax.swing.JRadioButton();
         radiobtn_female = new javax.swing.JRadioButton();
-        update_btn = new javax.swing.JButton();
         reset_btn = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
+        update_btn = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        showpasswordBOX = new javax.swing.JCheckBox();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -56,8 +98,32 @@ public class CustomerUpdate extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(46, 144, 232));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel4.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel15.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
+        jLabel15.setText("search icon or Enter Key to find a customer.");
+        jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 340, 560, 90));
+
+        jLabel16.setFont(new java.awt.Font("JetBrains Mono", 1, 36)); // NOI18N
+        jLabel16.setText("Customer Update");
+        jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 210, -1, 60));
+
+        backbtn.setBackground(new java.awt.Color(187, 214, 253));
+        backbtn.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
+        backbtn.setForeground(new java.awt.Color(255, 255, 255));
+        backbtn.setText("Back");
+        backbtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        backbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backbtnActionPerformed(evt);
+            }
+        });
+        jPanel4.add(backbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 800, 200, 50));
+
+        jLabel17.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
+        jLabel17.setText("Tip: Enter the customer ID and press the ");
+        jPanel4.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 310, 520, 60));
 
         searchID_txtfield.setFont(new java.awt.Font("Noto Sans", 1, 16)); // NOI18N
         searchID_txtfield.addActionListener(new java.awt.event.ActionListener() {
@@ -65,14 +131,15 @@ public class CustomerUpdate extends javax.swing.JFrame {
                 searchID_txtfieldActionPerformed(evt);
             }
         });
-        jPanel2.add(searchID_txtfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 70, 330, 40));
-
-        jLabel9.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Search ID:");
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, -1, -1));
+        searchID_txtfield.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                searchID_txtfieldKeyPressed(evt);
+            }
+        });
+        jPanel4.add(searchID_txtfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 330, 40));
 
         searchlbl_gif.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/wired-outline-19-magnifier-zoom-search-hover-spin (1).gif"))); // NOI18N
+        searchlbl_gif.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         searchlbl_gif.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 searchlbl_gifMouseClicked(evt);
@@ -84,12 +151,11 @@ public class CustomerUpdate extends javax.swing.JFrame {
                 searchlbl_gifMouseExited(evt);
             }
         });
-        jPanel2.add(searchlbl_gif, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 50, 90, 70));
+        jPanel4.add(searchlbl_gif, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, 90, 70));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 160));
-
-        jPanel1.setBackground(new java.awt.Color(135, 47, 207));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel18.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
+        jLabel18.setText("Search ID:");
+        jPanel4.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, -1, -1));
 
         customerName_field.setFont(new java.awt.Font("Noto Sans", 1, 16)); // NOI18N
         customerName_field.addActionListener(new java.awt.event.ActionListener() {
@@ -97,46 +163,63 @@ public class CustomerUpdate extends javax.swing.JFrame {
                 customerName_fieldActionPerformed(evt);
             }
         });
-        jPanel1.add(customerName_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 330, 40));
-        jPanel1.add(password_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 330, 40));
-        jPanel1.add(confirmPassword_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 330, 40));
+        jPanel4.add(customerName_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 330, 40));
 
-        jLabel4.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Confirm Password:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, -1, -1));
+        jLabel12.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
+        jLabel12.setText("Customer Name:");
+        jPanel4.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Password:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, -1, -1));
+        jLabel9.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
+        jLabel9.setText("Father Name:");
+        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Customer Name:");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, -1, -1));
+        fatherName_field.setFont(new java.awt.Font("Noto Sans", 1, 16)); // NOI18N
+        fatherName_field.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fatherName_fieldActionPerformed(evt);
+            }
+        });
+        jPanel4.add(fatherName_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 320, 330, 40));
 
-        jLabel7.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Email:");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, -1, -1));
+        jLabel5.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
+        jLabel5.setText("Password:");
+        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, -1, -1));
+        jPanel4.add(password_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 400, 330, 40));
+
+        jLabel13.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
+        jLabel13.setText("Confirm Password:");
+        jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 450, -1, -1));
+        jPanel4.add(confirmPassword_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 480, 330, 40));
+
+        jLabel19.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
+        jLabel19.setText("E-mail:");
+        jPanel4.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 530, -1, -1));
 
         email_field.setFont(new java.awt.Font("Noto Sans", 1, 16)); // NOI18N
-        jPanel1.add(email_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, 330, 40));
+        jPanel4.add(email_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 560, 330, 40));
 
-        jLabel6.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Gender:");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 470, -1, -1));
+        jLabel20.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
+        jLabel20.setText("Contact Number:");
+        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 610, -1, -1));
+
+        contactNumber_field.setFont(new java.awt.Font("Noto Sans", 1, 16)); // NOI18N
+        contactNumber_field.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                contactNumber_fieldActionPerformed(evt);
+            }
+        });
+        jPanel4.add(contactNumber_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 640, 330, 40));
+
+        jLabel21.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
+        jLabel21.setText("Gender:");
+        jPanel4.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 700, -1, -1));
 
         radiobtn_male.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
-        radiobtn_male.setForeground(new java.awt.Color(255, 255, 255));
         radiobtn_male.setText("Male");
         radiobtn_male.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(radiobtn_male, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 470, -1, -1));
+        jPanel4.add(radiobtn_male, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 700, -1, -1));
 
         radiobtn_female.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
-        radiobtn_female.setForeground(new java.awt.Color(255, 255, 255));
         radiobtn_female.setText("Female");
         radiobtn_female.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         radiobtn_female.addActionListener(new java.awt.event.ActionListener() {
@@ -144,66 +227,129 @@ public class CustomerUpdate extends javax.swing.JFrame {
                 radiobtn_femaleActionPerformed(evt);
             }
         });
-        jPanel1.add(radiobtn_female, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 470, -1, -1));
-
-        update_btn.setBackground(new java.awt.Color(255, 153, 153));
-        update_btn.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
-        update_btn.setForeground(new java.awt.Color(255, 255, 255));
-        update_btn.setText("Update");
-        update_btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                update_btnActionPerformed(evt);
-            }
-        });
-        jPanel1.add(update_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 530, 160, 40));
+        jPanel4.add(radiobtn_female, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 700, -1, -1));
 
         reset_btn.setBackground(new java.awt.Color(255, 102, 153));
         reset_btn.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
         reset_btn.setForeground(new java.awt.Color(255, 255, 255));
         reset_btn.setText("Reset");
+        reset_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         reset_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 reset_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(reset_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 530, 160, 40));
+        jPanel4.add(reset_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 800, 210, 50));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, 510, 710));
+        update_btn.setBackground(new java.awt.Color(255, 153, 153));
+        update_btn.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
+        update_btn.setForeground(new java.awt.Color(255, 255, 255));
+        update_btn.setText("Update");
+        update_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        update_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                update_btnActionPerformed(evt);
+            }
+        });
+        jPanel4.add(update_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 800, 210, 50));
 
-        jPanel4.setBackground(new java.awt.Color(135, 47, 207));
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 1200, 650));
+        jLabel6.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
+        jLabel6.setText("Show Password:");
+        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 750, 170, -1));
+        jPanel4.add(showpasswordBOX, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 750, -1, 30));
+
+        jButton1.setFont(new java.awt.Font("JetBrains Mono", 0, 20)); // NOI18N
+        jButton1.setText("Back");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 835, 150, -1));
+
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1170, 890));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
-        
+
         Helper.Tools.setCenter(this);
-        
+
     }//GEN-LAST:event_formWindowOpened
 
-    private void customerName_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerName_fieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_customerName_fieldActionPerformed
+    private void performSearch() {
+        String id = searchID_txtfield.getText().trim();
+        if (id.isEmpty()) {
+            Helper.Tools.show("Please enter the ID to search.");
+            return;
+        }
+        int userId;
+        try {
+            userId = Integer.parseInt(id);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Customer ID must be a number.");
+            return;
+        }
+        try {
+            ResultSet rs = dal.executeQuery("SELECT * FROM users WHERE user_id = " + userId);
+            if (rs != null && rs.next()) {
+                customerName_field.setText(rs.getString("username"));
+                email_field.setText(rs.getString("email"));
+                password_field.setText(""); // Always blank after search
+                confirmPassword_field.setText("");
+                contactNumber_field.setText(rs.getString("contact_number"));
+                fatherName_field.setText(rs.getString("fathername"));
+                String gender = rs.getString("gender");
+                if ("male".equalsIgnoreCase(gender)) {
+                    radiobtn_male.setSelected(true);
+                    radiobtn_female.setSelected(false);
+                } else if ("female".equalsIgnoreCase(gender)) {
+                    radiobtn_female.setSelected(true);
+                    radiobtn_male.setSelected(false);
+                } else {
+                    radiobtn_male.setSelected(false);
+                    radiobtn_female.setSelected(false);
+                }
+            } else {
+                Helper.Tools.show("No record found with this ID.");
+                // Clear all fields
+                customerName_field.setText("");
+                email_field.setText("");
+                password_field.setText("");
+                confirmPassword_field.setText("");
+                contactNumber_field.setText("");
+                fatherName_field.setText("");
+                radiobtn_male.setSelected(false);
+                radiobtn_female.setSelected(false);
+                genderButtonGroup.clearSelection(); // If you use a ButtonGroup
+            }
+        } catch (SQLException e) {
+            Helper.Tools.show("Error retrieving data.");
+            e.printStackTrace();
+        }
+    }
 
-    private void radiobtn_femaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radiobtn_femaleActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_radiobtn_femaleActionPerformed
-
-    private void update_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_update_btnActionPerformed
-        
-    }//GEN-LAST:event_update_btnActionPerformed
-
-    private void reset_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reset_btnActionPerformed
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_reset_btnActionPerformed
 
     private void searchID_txtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchID_txtfieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_searchID_txtfieldActionPerformed
+
+    private void searchID_txtfieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchID_txtfieldKeyPressed
+        // TODO add your handling code here:
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            performSearch();
+        }
+
+    }//GEN-LAST:event_searchID_txtfieldKeyPressed
+
+    private void searchlbl_gifMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchlbl_gifMouseClicked
+        // TODO add your handling code here:
+
+        performSearch();
+    }//GEN-LAST:event_searchlbl_gifMouseClicked
 
     private void searchlbl_gifMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchlbl_gifMouseEntered
         // TODO add your handling code here:
@@ -213,9 +359,141 @@ public class CustomerUpdate extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_searchlbl_gifMouseExited
 
-    private void searchlbl_gifMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchlbl_gifMouseClicked
+    private void customerName_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerName_fieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_searchlbl_gifMouseClicked
+    }//GEN-LAST:event_customerName_fieldActionPerformed
+
+    private void fatherName_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fatherName_fieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fatherName_fieldActionPerformed
+
+    private void contactNumber_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactNumber_fieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_contactNumber_fieldActionPerformed
+
+    private void radiobtn_femaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radiobtn_femaleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_radiobtn_femaleActionPerformed
+
+    private void reset_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reset_btnActionPerformed
+        // TODO add your handling code here:
+
+        searchID_txtfield.setText("");
+        customerName_field.setText("");
+        fatherName_field.setText("");
+        contactNumber_field.setText("");
+        email_field.setText("");
+        password_field.setText("");
+        confirmPassword_field.setText("");
+
+        // Clear radio button selection
+        radiobtn_male.setSelected(false);
+        radiobtn_female.setSelected(false);
+
+        // Optionally: set focus to the first field
+        customerName_field.requestFocus();
+        genderButtonGroup.clearSelection();
+
+    }//GEN-LAST:event_reset_btnActionPerformed
+
+    private void update_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_update_btnActionPerformed
+
+        String id = searchID_txtfield.getText().trim();
+        String username = customerName_field.getText().trim();
+        String fatherName = fatherName_field.getText().trim();
+        String contact = contactNumber_field.getText().trim();
+        String email = email_field.getText().trim();
+        String password = new String(password_field.getPassword());
+        String confirmPassword = new String(confirmPassword_field.getPassword());
+        int userId;
+        try {
+            userId = Integer.parseInt(id);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Customer ID must be a number.");
+            return;
+        }
+        if (!email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")) {
+            JOptionPane.showMessageDialog(this, "Invalid email format.");
+            return;
+        }
+        if (!contact.matches("\\d{10,15}")) {
+            JOptionPane.showMessageDialog(this, "Invalid contact number.");
+            return;
+        }
+        String gender = "";
+        if (radiobtn_male.isSelected()) {
+            gender = "Male";
+        } else if (radiobtn_female.isSelected()) {
+            gender = "Female";
+        }
+
+// Basic validation
+        if (id.isEmpty() || username.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please fill all fields correctly.");
+            return;
+        }
+
+        if (!password.isEmpty() || !confirmPassword.isEmpty()) {
+            if (!password.equals(confirmPassword)) {
+                JOptionPane.showMessageDialog(this, "Passwords do not match.");
+                return;
+            }
+        }
+
+        try {
+            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/supermarket", "root", "");
+
+            PreparedStatement ps;
+            if (!password.isEmpty()) {
+                // Hash and update password only if entered.
+                String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
+                String query = "UPDATE users SET username=?, password=?, email=?, gender=?, contact_number=?, fathername=? WHERE user_id=?";
+                ps = conn.prepareStatement(query);
+                ps.setString(1, username);
+                ps.setString(2, hashedPassword);
+                ps.setString(3, email);
+                ps.setString(4, gender);
+                ps.setString(5, contact);
+                ps.setString(6, fatherName);
+                ps.setInt(7, userId); // <------ use userId here
+            } else {
+                String query = "UPDATE users SET username=?, email=?, gender=?, contact_number=?, fathername=? WHERE user_id=?";
+                ps = conn.prepareStatement(query);
+                ps.setString(1, username);
+                ps.setString(2, email);
+                ps.setString(3, gender);
+                ps.setString(4, contact);
+                ps.setString(5, fatherName);
+                ps.setInt(6, userId);
+            }
+            int rows = ps.executeUpdate();
+            if (rows > 0) {
+                JOptionPane.showMessageDialog(this, "User updated successfully.");
+            } else {
+                JOptionPane.showMessageDialog(this, "No user found with the given ID.");
+            }
+
+            ps.close();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Database error: " + e.getMessage());
+        }
+    }//GEN-LAST:event_update_btnActionPerformed
+
+    private void backbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbtnActionPerformed
+        // TODO add your handling code here:
+
+        new CustomerInformation().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_backbtnActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+
+        new CustomerInformation().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -254,17 +532,25 @@ public class CustomerUpdate extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backbtn;
     private javax.swing.JPasswordField confirmPassword_field;
+    private javax.swing.JTextField contactNumber_field;
     private javax.swing.JTextField customerName_field;
     private javax.swing.JTextField email_field;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JTextField fatherName_field;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPasswordField password_field;
     private javax.swing.JRadioButton radiobtn_female;
@@ -272,6 +558,7 @@ public class CustomerUpdate extends javax.swing.JFrame {
     private javax.swing.JButton reset_btn;
     private javax.swing.JTextField searchID_txtfield;
     private javax.swing.JLabel searchlbl_gif;
+    private javax.swing.JCheckBox showpasswordBOX;
     private javax.swing.JButton update_btn;
     // End of variables declaration//GEN-END:variables
 }

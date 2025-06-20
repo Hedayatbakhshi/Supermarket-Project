@@ -14,52 +14,55 @@ import javax.swing.KeyStroke;
 import javax.swing.UIManager;
 import org.mindrot.jbcrypt.BCrypt;
 
+
 /**
  * @author android1
  */
 public class Login extends javax.swing.JFrame {
-    
-private DAL dal = new DAL();
+
+    private DAL dal = new DAL();
 
     int loginAttempt = 1;
-
 
     /**
      * Creates new form Login
      */
     public Login() {
         initComponents();
-        
-        
-      //--------------------delete whole password from passwordField in login--------------------
-         txtPassword.getInputMap().put(KeyStroke.getKeyStroke("ctrl BACK_SPACE"), "delete-previous-word");
-          txtPassword.getActionMap().put("delete-previous-word", new AbstractAction() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            try {
-                int caretPos = txtPassword.getCaretPosition();
-                String text = new String(txtPassword.getPassword());
 
-                if (caretPos == 0) return;
+        setResizable(false);
 
-                int deleteFrom = caretPos - 1;
-                while (deleteFrom > 0 && Character.isWhitespace(text.charAt(deleteFrom))) {
-                    deleteFrom--;
+        //--------------------delete whole password from passwordField in login--------------------
+        txtPassword.getInputMap().put(KeyStroke.getKeyStroke("ctrl BACK_SPACE"), "delete-previous-word");
+        txtPassword.getActionMap().put("delete-previous-word", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    int caretPos = txtPassword.getCaretPosition();
+                    String text = new String(txtPassword.getPassword());
+
+                    if (caretPos == 0) {
+                        return;
+                    }
+
+                    int deleteFrom = caretPos - 1;
+                    while (deleteFrom > 0 && Character.isWhitespace(text.charAt(deleteFrom))) {
+                        deleteFrom--;
+                    }
+                    while (deleteFrom > 0 && !Character.isWhitespace(text.charAt(deleteFrom - 1))) {
+                        deleteFrom--;
+                    }
+
+                    StringBuilder sb = new StringBuilder(text);
+                    sb.delete(deleteFrom, caretPos);
+                    txtPassword.setText(sb.toString());
+                    txtPassword.setCaretPosition(deleteFrom);
+                } catch (Exception ex) {
+                    ex.printStackTrace();
                 }
-                while (deleteFrom > 0 && !Character.isWhitespace(text.charAt(deleteFrom - 1))) {
-                    deleteFrom--;
-                }
-
-                StringBuilder sb = new StringBuilder(text);
-                sb.delete(deleteFrom, caretPos);
-                txtPassword.setText(sb.toString());
-                txtPassword.setCaretPosition(deleteFrom);
-            } catch (Exception ex) {
-                ex.printStackTrace();
             }
         }
-    }
-          );
+        );
     }
 
     // ---------------------- HELPER FUNCTION --------------------------
@@ -78,52 +81,44 @@ private DAL dal = new DAL();
     }
 
     // ---------------------- LOGIN FUNCTION --------------------------
-  private void login() {
-    String username = txtUsername.getText().trim();
-    String password = new String(txtPassword.getPassword()).trim();
+    private void login() {
+        String username = txtUsername.getText().trim();
+        String password = new String(txtPassword.getPassword()).trim();
 
-    if (username.isEmpty() || password.isEmpty()) {
-        lbl_Password_Wrong.setText("Please enter both Username and Password.");
-        return;
-    }
+        if (username.isEmpty() || password.isEmpty()) {
+            lbl_Password_Wrong.setText("Please enter both Username and Password.");
+            return;
+        }
 
-    String sql = "SELECT password FROM users WHERE username = ?";
+        String sql = "SELECT password FROM users WHERE username = ?";
 
-    try (PreparedStatement pstm = dal.getConnection().prepareStatement(sql)) {
-        pstm.setString(1, username);
+        try (PreparedStatement pstm = dal.getConnection().prepareStatement(sql)) {
+            pstm.setString(1, username);
 
-        try (ResultSet rs = pstm.executeQuery()) {
-            if (rs.next()) {
-                String storedHash = rs.getString("password");
-
-                if (BCrypt.checkpw(password, storedHash)) {
-                    // Password matches, login success
-                    this.setVisible(false);
-                    new Home().setVisible(true);
-                } else {
-                    // Password does not match
-                    lbl_Password_Wrong.setText("Your Username or Password is incorrect!");
-                    loginAttempt++;
-                    if (loginAttempt > 3) {
-                        Helper.Tools.show("Too many failed attempts. Exiting...");
-                        System.exit(0);
+            try (ResultSet rs = pstm.executeQuery()) {
+                if (rs.next()) {
+                    String storedHash = rs.getString("password");
+                    if (BCrypt.checkpw(password, storedHash)) {
+                        // Password matches, login success
+                        this.setVisible(false);
+                        new Dashboard(username).setVisible(true);
+                        return;
                     }
                 }
-            } else {
-                // Username not found
+                // If we reach here: either wrong password or username not found
                 lbl_Password_Wrong.setText("Your Username or Password is incorrect!");
+                loginAttempt++;
+                if (loginAttempt > 3) {
+                    Helper.Tools.show("Too many failed attempts. Exiting...");
+                    System.exit(0);
+                }
             }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage(), "Database Error", JOptionPane.ERROR_MESSAGE);
         }
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Error: " + e.getMessage(), "Database Error", JOptionPane.ERROR_MESSAGE);
     }
-}
-
-
 
     //-----------------------------------------------Reset password--------------------------------------------------------------------
-
-
 //    private void openResetPasswordDialog() {
 //        JTextField usernameField = new JTextField();
 //        JPasswordField newPasswordField = new JPasswordField();
@@ -155,30 +150,28 @@ private DAL dal = new DAL();
 //            resetPassword(username, newPassword);
 //        }
 //    }
-
     //-----------------------------------------Helper reset Password-------------------------------------------------------------
     private void resetPassword(String username, String newPassword) {
-         // Generate a bcrypt hash of the new password
-    String hashedPassword = BCrypt.hashpw(newPassword, BCrypt.gensalt());
+        // Generate a bcrypt hash of the new password
+        String hashedPassword = BCrypt.hashpw(newPassword, BCrypt.gensalt());
 
-    try {
-        String sql = "UPDATE users SET password = ? WHERE username = ?";
-        try (PreparedStatement pstm = dal.getConnection().prepareStatement(sql)) {
-            pstm.setString(1, hashedPassword);
-            pstm.setString(2, username);
+        try {
+            String sql = "UPDATE users SET password = ? WHERE username = ?";
+            try (PreparedStatement pstm = dal.getConnection().prepareStatement(sql)) {
+                pstm.setString(1, hashedPassword);
+                pstm.setString(2, username);
 
-            int rowsUpdated = pstm.executeUpdate();
-            if (rowsUpdated > 0) {
-                JOptionPane.showMessageDialog(this, "Password updated successfully!");
-            } else {
-                JOptionPane.showMessageDialog(this, "Username not found.", "Error", JOptionPane.ERROR_MESSAGE);
+                int rowsUpdated = pstm.executeUpdate();
+                if (rowsUpdated > 0) {
+                    JOptionPane.showMessageDialog(this, "Password updated successfully!");
+                } else {
+                    JOptionPane.showMessageDialog(this, "Username not found.", "Error", JOptionPane.ERROR_MESSAGE);
+                }
             }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage(), "Database Error", JOptionPane.ERROR_MESSAGE);
         }
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Error: " + e.getMessage(), "Database Error", JOptionPane.ERROR_MESSAGE);
     }
-    }
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -189,19 +182,20 @@ private DAL dal = new DAL();
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLayeredPane2 = new javax.swing.JLayeredPane();
+        jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        btnLogin = new javax.swing.JButton();
-        btnExit = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        txtUsername = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        txtPassword = new javax.swing.JPasswordField();
-        lbl_Password_Wrong = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        txtUsername = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        txtPassword = new javax.swing.JPasswordField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        checkbox_showpassword = new javax.swing.JCheckBox();
+        btnExit = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        lbl_Password_Wrong = new javax.swing.JLabel();
+        btnLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -211,46 +205,19 @@ private DAL dal = new DAL();
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLayeredPane2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel2.setBackground(new java.awt.Color(255, 153, 153));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/wired-outline-21-avatar-morph-group (1).gif"))); // NOI18N
-        jLayeredPane2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, 120, 100));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 140, 120, 100));
 
-        btnLogin.setBackground(new java.awt.Color(255, 153, 153));
-        btnLogin.setFont(new java.awt.Font("JetBrains Mono", 1, 24)); // NOI18N
-        btnLogin.setForeground(new java.awt.Color(255, 255, 255));
-        btnLogin.setText("Login");
-        btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLoginActionPerformed(evt);
-            }
-        });
-        btnLogin.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                btnLoginKeyPressed(evt);
-            }
-        });
-        jLayeredPane2.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 170, 40));
+        jLabel7.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Username:");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 250, -1, -1));
 
-        btnExit.setBackground(new java.awt.Color(255, 102, 153));
-        btnExit.setFont(new java.awt.Font("JetBrains Mono", 1, 24)); // NOI18N
-        btnExit.setForeground(new java.awt.Color(255, 255, 255));
-        btnExit.setText("Reset");
-        btnExit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnExit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnExitActionPerformed(evt);
-            }
-        });
-        jLayeredPane2.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 450, 170, 40));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/wired-gradient-268-avatar-man-hover-nodding.gif"))); // NOI18N
-        jLabel3.setToolTipText("");
-        jLayeredPane2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 70, 90));
-
-        txtUsername.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtUsername.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(51, 51, 255)));
+        txtUsername.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
+        txtUsername.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(102, 102, 255)));
         txtUsername.setOpaque(true);
         txtUsername.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -267,7 +234,54 @@ private DAL dal = new DAL();
                 txtUsernameKeyPressed(evt);
             }
         });
-        jLayeredPane2.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 300, 50));
+        jPanel2.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 280, 300, 50));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/wired-gradient-268-avatar-man-hover-nodding.gif"))); // NOI18N
+        jLabel3.setToolTipText("");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, 70, 90));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/wired-outline-946-equity-security-hover-locked.gif"))); // NOI18N
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 70, 80));
+
+        txtPassword.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
+        txtPassword.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(102, 102, 255)));
+        txtPassword.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtPasswordKeyPressed(evt);
+            }
+        });
+        jPanel2.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 370, 300, 50));
+
+        jLabel8.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Password:");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 340, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Show Password:");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 430, 170, -1));
+
+        checkbox_showpassword.setFont(new java.awt.Font("Monda", 0, 24)); // NOI18N
+        checkbox_showpassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkbox_showpasswordActionPerformed(evt);
+            }
+        });
+        jPanel2.add(checkbox_showpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 420, 30, 50));
+
+        btnExit.setBackground(new java.awt.Color(255, 102, 153));
+        btnExit.setFont(new java.awt.Font("JetBrains Mono", 1, 24)); // NOI18N
+        btnExit.setForeground(new java.awt.Color(255, 255, 255));
+        btnExit.setText("Reset");
+        btnExit.setBorder(new javax.swing.border.MatteBorder(null));
+        btnExit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 530, 170, 40));
 
         jLabel4.setFont(new java.awt.Font("sansserif", 1, 20)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -278,33 +292,31 @@ private DAL dal = new DAL();
                 jLabel4MouseClicked(evt);
             }
         });
-        jLayeredPane2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 530, 360, 50));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 570, 360, 50));
 
-        txtPassword.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtPasswordKeyPressed(evt);
+        lbl_Password_Wrong.setFont(new java.awt.Font("JetBrains Mono", 1, 16)); // NOI18N
+        lbl_Password_Wrong.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.add(lbl_Password_Wrong, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 480, 420, 40));
+
+        btnLogin.setBackground(new java.awt.Color(0, 123, 255));
+        btnLogin.setFont(new java.awt.Font("JetBrains Mono", 1, 24)); // NOI18N
+        btnLogin.setForeground(new java.awt.Color(255, 255, 255));
+        btnLogin.setText("Login");
+        btnLogin.setBorder(new javax.swing.border.MatteBorder(null));
+        btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
             }
         });
-        jLayeredPane2.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 350, 300, 50));
+        btnLogin.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnLoginKeyPressed(evt);
+            }
+        });
+        jPanel2.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 530, 170, 40));
 
-        lbl_Password_Wrong.setFont(new java.awt.Font("JetBrains Mono", 1, 14)); // NOI18N
-        jLayeredPane2.add(lbl_Password_Wrong, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 390, 40));
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/wired-outline-946-equity-security-hover-locked.gif"))); // NOI18N
-        jLayeredPane2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 330, 70, 80));
-
-        jLabel6.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
-        jLabel6.setText("Password:");
-        jLayeredPane2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, -1, -1));
-
-        jLabel7.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
-        jLabel7.setText("Username:");
-        jLayeredPane2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, -1, -1));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/F.png"))); // NOI18N
-        jLayeredPane2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 700));
-
-        getContentPane().add(jLayeredPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 700));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1310, 780));
 
         pack();
         setLocationRelativeTo(null);
@@ -315,9 +327,23 @@ private DAL dal = new DAL();
         Helper.Tools.setCenter(this);
     }//GEN-LAST:event_formWindowOpened
 
-    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        login();
-    }//GEN-LAST:event_btnLoginActionPerformed
+    private void checkbox_showpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkbox_showpasswordActionPerformed
+        // TODO add your handling code here:
+
+        if (checkbox_showpassword.isSelected()) {
+            // Show password
+            txtPassword.setEchoChar((char) 0);
+        } else {
+            // Hide password
+            txtPassword.setEchoChar('\u2022'); // default bullet char, or use '*'
+        }
+    }//GEN-LAST:event_checkbox_showpasswordActionPerformed
+
+    private void txtPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPasswordKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            login();
+        }
+    }//GEN-LAST:event_txtPasswordKeyPressed
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         // TODO add your handling code here:
@@ -325,11 +351,12 @@ private DAL dal = new DAL();
         this.dispose();
     }//GEN-LAST:event_jLabel4MouseClicked
 
-    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
-        txtUsername.setText("");
-        txtPassword.setText("");
-        lbl_Password_Wrong.setText("");
-    }//GEN-LAST:event_btnExitActionPerformed
+    private void txtUsernameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUsernameKeyPressed
+        // TODO add your handling code here:
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            txtPassword.requestFocus();
+        }
+    }//GEN-LAST:event_txtUsernameKeyPressed
 
     private void txtUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsernameActionPerformed
         // TODO add your handling code here:
@@ -339,32 +366,26 @@ private DAL dal = new DAL();
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUsernameMouseClicked
 
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        txtUsername.setText("");
+        txtPassword.setText("");
+        lbl_Password_Wrong.setText("");
+    }//GEN-LAST:event_btnExitActionPerformed
+
     private void btnLoginKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnLoginKeyPressed
         // TODO add your handling code here:
-
     }//GEN-LAST:event_btnLoginKeyPressed
 
-    private void txtPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPasswordKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            login();
-        }
-    }//GEN-LAST:event_txtPasswordKeyPressed
-
-    private void txtUsernameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUsernameKeyPressed
-        // TODO add your handling code here:
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            txtPassword.requestFocus();
-        }
-
-    }//GEN-LAST:event_txtUsernameKeyPressed
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        login();
+    }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
      * @param args the command line arguments
      */
-
-
     // ---------------------- MAIN --------------------------
     public static void main(String[] args) {
+
         try {
             for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -379,20 +400,22 @@ private DAL dal = new DAL();
 
         // Launch the Login form
         java.awt.EventQueue.invokeLater(() -> new Login().setVisible(true));
+
     }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnLogin;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JCheckBox checkbox_showpassword;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLayeredPane jLayeredPane2;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lbl_Password_Wrong;
     private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUsername;

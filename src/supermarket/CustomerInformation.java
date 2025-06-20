@@ -15,6 +15,8 @@ public class CustomerInformation extends javax.swing.JFrame {
      */
     public CustomerInformation() {
         initComponents();
+
+        setResizable(false);
     }
 
     /**
@@ -38,20 +40,22 @@ public class CustomerInformation extends javax.swing.JFrame {
         jPanel11 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         update_customer = new javax.swing.JLabel();
-        jPanel12 = new javax.swing.JPanel();
-        jPanel13 = new javax.swing.JPanel();
-        delete_customer = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jPanel14 = new javax.swing.JPanel();
-        jPanel15 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        report_customer = new javax.swing.JLabel();
+        jPanel16 = new javax.swing.JPanel();
+        jPanel17 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        customer_lists = new javax.swing.JLabel();
+        back = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(201, 62, 136));
+        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("JetBrainsMono NF ExtraBold", 0, 48)); // NOI18N
@@ -61,7 +65,7 @@ public class CustomerInformation extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-customer-100.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 100, 120));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1310, 180));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1310, 210));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -72,6 +76,7 @@ public class CustomerInformation extends javax.swing.JFrame {
         jPanel8.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 190, 160));
 
         add_customer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-customer-60.png"))); // NOI18N
+        add_customer.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         add_customer.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 add_customerMouseClicked(evt);
@@ -84,7 +89,7 @@ public class CustomerInformation extends javax.swing.JFrame {
         jLabel11.setText("Add Customer");
         jPanel8.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
 
-        jPanel2.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 190, 160));
+        jPanel2.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 240, 190, 160));
 
         jPanel10.setBackground(new java.awt.Color(255, 204, 255));
         jPanel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -97,43 +102,52 @@ public class CustomerInformation extends javax.swing.JFrame {
         jPanel10.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
 
         update_customer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-update-64.png"))); // NOI18N
+        update_customer.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        update_customer.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                update_customerMouseClicked(evt);
+            }
+        });
         jPanel10.add(update_customer, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 70, 100));
 
-        jPanel2.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, -1, 160));
+        jPanel2.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 240, -1, 160));
 
-        jPanel12.setBackground(new java.awt.Color(255, 204, 255));
-        jPanel12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel12.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 190, 160));
+        jPanel16.setBackground(new java.awt.Color(255, 204, 255));
+        jPanel16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel16.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 190, 160));
 
-        delete_customer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-trash-can-60.png"))); // NOI18N
-        jPanel12.add(delete_customer, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 70, 100));
+        jLabel12.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(201, 62, 136));
+        jLabel12.setText("Customers List");
+        jPanel16.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
 
-        jLabel9.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(201, 62, 136));
-        jLabel9.setText("Delete");
-        jPanel12.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
+        customer_lists.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-customers-60.png"))); // NOI18N
+        customer_lists.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        customer_lists.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                customer_listsMouseClicked(evt);
+            }
+        });
+        jPanel16.add(customer_lists, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 70, 100));
 
-        jPanel2.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 200, -1, 160));
+        jPanel2.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 240, -1, 160));
 
-        jPanel14.setBackground(new java.awt.Color(255, 204, 255));
-        jPanel14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel14.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 190, 160));
-
-        jLabel10.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(201, 62, 136));
-        jLabel10.setText("Report");
-        jPanel14.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
-
-        report_customer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-report-50.png"))); // NOI18N
-        jPanel14.add(report_customer, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 70, 100));
-
-        jPanel2.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 200, -1, 160));
+        back.setFont(new java.awt.Font("JetBrains Mono", 0, 18)); // NOI18N
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-back-48 (1).png"))); // NOI18N
+        back.setText("Back");
+        back.setBorder(new javax.swing.border.MatteBorder(null));
+        back.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backMouseClicked(evt);
+            }
+        });
+        jPanel2.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 550, 120, 60));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/customer_inforamtion.png"))); // NOI18N
         jLabel3.setText("jLabel3");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1310, 570));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1310, 540));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 1310, 630));
 
@@ -142,9 +156,34 @@ public class CustomerInformation extends javax.swing.JFrame {
 
     private void add_customerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_add_customerMouseClicked
         // TODO add your handling code here:
-        new UserAdd().setVisible(true);
+        new UserAddCustomerInformation().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_add_customerMouseClicked
+
+    private void update_customerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_update_customerMouseClicked
+        // TODO add your handling code here:
+        new CustomerUpdate().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_update_customerMouseClicked
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        Helper.Tools.setCenter(this);
+    }//GEN-LAST:event_formWindowOpened
+
+    private void customer_listsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_customer_listsMouseClicked
+        // TODO add your handling code here:
+
+        new CustomerList().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_customer_listsMouseClicked
+
+    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
+        // TODO add your handling code here:
+
+        new Dashboard().setVisible(true);
+        this.dispose();
+
+    }//GEN-LAST:event_backMouseClicked
 
     /**
      * @param args the command line arguments
@@ -183,25 +222,22 @@ public class CustomerInformation extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel add_customer;
-    private javax.swing.JLabel delete_customer;
+    private javax.swing.JLabel back;
+    private javax.swing.JLabel customer_lists;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JLabel report_customer;
     private javax.swing.JLabel update_customer;
     // End of variables declaration//GEN-END:variables
 }

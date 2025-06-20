@@ -3,9 +3,10 @@ package supermarket;
 import java.sql.*;
 
 public class DAL {
+
     private Connection con;
     private PreparedStatement st;
-    private ResultSet rs; 
+    private ResultSet rs;
 
     public DAL() {
         try {
@@ -47,47 +48,59 @@ public class DAL {
 
     public void close() {
         try {
-            if (con != null) con.close();
+            if (con != null) {
+                con.close();
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-    public Object[][] select (String command){
-        
-       try {
-        PreparedStatement pst = con.prepareStatement(command); // ✅ create the statement here
-        rs = pst.executeQuery(); // ✅ no need to pass the query again
 
-        rs.last();
-        int totalRow = rs.getRow();
-        rs.beforeFirst();
+    public Object[][] select(String command) {
 
-        int totalColumn = rs.getMetaData().getColumnCount();
-        Object[][] data = new Object[totalRow][totalColumn]; // ✅ fix: totalRow, not totalColumn
+        try {
+            PreparedStatement pst = con.prepareStatement(command); // ✅ create the statement here
+            rs = pst.executeQuery(); // ✅ no need to pass the query again
 
-        int y = 0;
-        while (rs.next()) {
-            for (int x = 0; x < totalColumn; x++) {
-                data[y][x] = rs.getObject(x + 1); // ✅ JDBC column indices start from 1
+            rs.last();
+            int totalRow = rs.getRow();
+            rs.beforeFirst();
+
+            int totalColumn = rs.getMetaData().getColumnCount();
+            Object[][] data = new Object[totalRow][totalColumn]; // ✅ fix: totalRow, not totalColumn
+
+            int y = 0;
+            while (rs.next()) {
+                for (int x = 0; x < totalColumn; x++) {
+                    data[y][x] = rs.getObject(x + 1); // ✅ JDBC column indices start from 1
+                }
+                y++;
             }
-            y++;
+
+            return data;
+
+        } catch (Exception ex) {
+            System.out.println("Select Error: " + ex.getMessage());
+            return null;
         }
 
-        return data;
+    }
 
-    } catch (Exception ex) {
-        System.out.println("Select Error: " + ex.getMessage());
-        return null;
+    public boolean insertLog(int userId, String action) {
+        String sql = "INSERT INTO logs (user_id, action) VALUES (?, ?)";
+        try (PreparedStatement pst = con.prepareStatement(sql)) {
+            pst.setInt(1, userId);
+            pst.setString(2, action);
+            int affectedRows = pst.executeUpdate();
+            return affectedRows > 0;
+        } catch (SQLException e) {
+            Helper.Tools.show("Error logging action.");
+            e.printStackTrace();
+            return false;
+        }
     }
-                
-        
-    }
+    
+    
+    
+    
 }
-
-
-
-
-
-
-
-

@@ -7,7 +7,6 @@ package supermarket;
 import java.sql.*;
 import org.mindrot.jbcrypt.BCrypt;
 
-
 /**
  * @author android1
  */
@@ -18,6 +17,8 @@ public class UserAdd extends javax.swing.JFrame {
      */
     public UserAdd() {
         initComponents();
+
+        setResizable(false);
     }
 
     /**
@@ -32,23 +33,31 @@ public class UserAdd extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         jLayeredPane1 = new javax.swing.JLayeredPane();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        gif_lbl = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         password_registeration_CNf = new javax.swing.JPasswordField();
         email_registration = new javax.swing.JTextField();
         password_registeration = new javax.swing.JPasswordField();
-        username_registeration = new javax.swing.JTextField();
+        fathername_registeration = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         radiobtn_female = new javax.swing.JRadioButton();
         radiobtn_male = new javax.swing.JRadioButton();
         jLabel7 = new javax.swing.JLabel();
         btn_register_registeration = new javax.swing.JButton();
         btn_cancel_registeration = new javax.swing.JButton();
-        UserAdd_back = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        contactNumber_registeration = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        username_registeration = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        checkbox_showpassword = new javax.swing.JCheckBox();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        btn_reset_registeration = new javax.swing.JButton();
+        back = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -61,45 +70,49 @@ public class UserAdd extends javax.swing.JFrame {
         jLayeredPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jLayeredPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/wired-gradient-21-avatar-hover-jumping115.gif"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 90, 120, 140));
+        jPanel4.setBackground(new java.awt.Color(251, 252, 251));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Back to Login");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 640, -1, -1));
+        gif_lbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/User Registeration 1 .gif"))); // NOI18N
+        jPanel4.add(gif_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 790));
+
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 600, 780));
+
+        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Confirm Password:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 390, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 370, -1, -1));
 
-        jLabel6.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Gender:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 560, -1, -1));
-        getContentPane().add(password_registeration_CNf, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 420, 330, 40));
-
-        email_registration.setFont(new java.awt.Font("Noto Sans", 1, 16)); // NOI18N
-        getContentPane().add(email_registration, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 500, 330, 40));
-        getContentPane().add(password_registeration, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 340, 330, 40));
-
-        username_registeration.setFont(new java.awt.Font("Noto Sans", 1, 16)); // NOI18N
-        username_registeration.addActionListener(new java.awt.event.ActionListener() {
+        password_registeration_CNf.setFont(new java.awt.Font("Noto Sans", 0, 18)); // NOI18N
+        password_registeration_CNf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                username_registerationActionPerformed(evt);
+                password_registeration_CNfActionPerformed(evt);
             }
         });
-        getContentPane().add(username_registeration, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 260, 330, 40));
+        jPanel1.add(password_registeration_CNf, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 330, 40));
+
+        email_registration.setFont(new java.awt.Font("Noto Sans", 0, 18)); // NOI18N
+        jPanel1.add(email_registration, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 490, 330, 40));
+
+        password_registeration.setFont(new java.awt.Font("Noto Sans", 0, 18)); // NOI18N
+        jPanel1.add(password_registeration, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 330, 40));
+
+        fathername_registeration.setFont(new java.awt.Font("Noto Sans", 0, 18)); // NOI18N
+        fathername_registeration.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fathername_registerationActionPerformed(evt);
+            }
+        });
+        jPanel1.add(fathername_registeration, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 330, 40));
 
         jLabel8.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Username:");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, -1, -1));
+        jLabel8.setText("Father Name:");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, -1, -1));
 
         buttonGroup1.add(radiobtn_female);
         radiobtn_female.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
-        radiobtn_female.setForeground(new java.awt.Color(255, 255, 255));
         radiobtn_female.setText("Female");
         radiobtn_female.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         radiobtn_female.addActionListener(new java.awt.event.ActionListener() {
@@ -107,60 +120,119 @@ public class UserAdd extends javax.swing.JFrame {
                 radiobtn_femaleActionPerformed(evt);
             }
         });
-        getContentPane().add(radiobtn_female, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 560, -1, -1));
+        jPanel1.add(radiobtn_female, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 620, -1, -1));
 
         buttonGroup1.add(radiobtn_male);
         radiobtn_male.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
-        radiobtn_male.setForeground(new java.awt.Color(255, 255, 255));
         radiobtn_male.setText("Male");
         radiobtn_male.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(radiobtn_male, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 560, -1, -1));
+        jPanel1.add(radiobtn_male, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 620, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Email:");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 470, -1, -1));
+        jLabel7.setText("Contact Number:");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 540, -1, -1));
 
-        btn_register_registeration.setBackground(new java.awt.Color(255, 153, 153));
+        btn_register_registeration.setBackground(new java.awt.Color(255, 102, 102));
         btn_register_registeration.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
         btn_register_registeration.setForeground(new java.awt.Color(255, 255, 255));
         btn_register_registeration.setText("Register");
+        btn_register_registeration.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_register_registeration.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_register_registerationActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_register_registeration, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 620, 160, 40));
+        jPanel1.add(btn_register_registeration, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 710, 160, 40));
 
-        btn_cancel_registeration.setBackground(new java.awt.Color(255, 102, 153));
+        btn_cancel_registeration.setBackground(new java.awt.Color(255, 102, 102));
         btn_cancel_registeration.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
         btn_cancel_registeration.setForeground(new java.awt.Color(255, 255, 255));
         btn_cancel_registeration.setText("Cancel");
+        btn_cancel_registeration.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_cancel_registeration.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_cancel_registerationActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_cancel_registeration, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 620, 160, 40));
-
-        UserAdd_back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-back-100.png"))); // NOI18N
-        UserAdd_back.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        UserAdd_back.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                UserAdd_backMouseClicked(evt);
-            }
-        });
-        getContentPane().add(UserAdd_back, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 580, 240, 140));
+        jPanel1.add(btn_cancel_registeration, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 710, 160, 40));
 
         jLabel5.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Password:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 290, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/1170 x 720 Create  a new user.gif"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1180, 740));
+        contactNumber_registeration.setFont(new java.awt.Font("Noto Sans", 0, 18)); // NOI18N
+        contactNumber_registeration.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                contactNumber_registerationActionPerformed(evt);
+            }
+        });
+        jPanel1.add(contactNumber_registeration, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 570, 330, 40));
+
+        jLabel9.setFont(new java.awt.Font("Poppins SemiBold", 1, 36)); // NOI18N
+        jLabel9.setText("Customer Registeration");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 470, 100));
+
+        username_registeration.setFont(new java.awt.Font("Noto Sans", 0, 18)); // NOI18N
+        username_registeration.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                username_registerationActionPerformed(evt);
+            }
+        });
+        jPanel1.add(username_registeration, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 330, 40));
+
+        jLabel10.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
+        jLabel10.setText("Email:");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 460, -1, -1));
+
+        jLabel11.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
+        jLabel11.setText("Customer Name:");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, -1, -1));
+
+        checkbox_showpassword.setFont(new java.awt.Font("Monda", 0, 24)); // NOI18N
+        checkbox_showpassword.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        checkbox_showpassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkbox_showpasswordActionPerformed(evt);
+            }
+        });
+        jPanel1.add(checkbox_showpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 670, 30, 30));
+
+        jLabel12.setFont(new java.awt.Font("JetBrains Mono", 1, 20)); // NOI18N
+        jLabel12.setText("Gender:");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 620, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
+        jLabel6.setText("Show Password:");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 670, 170, -1));
+
+        btn_reset_registeration.setBackground(new java.awt.Color(255, 102, 153));
+        btn_reset_registeration.setFont(new java.awt.Font("JetBrains Mono", 1, 18)); // NOI18N
+        btn_reset_registeration.setForeground(new java.awt.Color(255, 255, 255));
+        btn_reset_registeration.setText("Reset");
+        btn_reset_registeration.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_reset_registeration.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_reset_registerationActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_reset_registeration, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 710, 160, 40));
+
+        back.setFont(new java.awt.Font("JetBrains Mono", 0, 18)); // NOI18N
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-back-48 (1).png"))); // NOI18N
+        back.setText("Back");
+        back.setBorder(new javax.swing.border.MatteBorder(null));
+        back.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backMouseClicked(evt);
+            }
+        });
+        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 700, 120, 60));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 780));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
@@ -180,14 +252,15 @@ public class UserAdd extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_cancel_registerationActionPerformed
 
     private void btn_register_registerationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_register_registerationActionPerformed
-        // TODO add your handling code here:
         String username = username_registeration.getText().trim();
+        String fathername = fathername_registeration.getText().trim();
         String email = email_registration.getText().trim();
+        String contactNumber = contactNumber_registeration.getText().trim();
         String password = new String(password_registeration.getPassword());
         String confirmPassword = new String(password_registeration_CNf.getPassword());
         String gender = radiobtn_male.isSelected() ? "Male" : radiobtn_female.isSelected() ? "Female" : "";
 
-        if (username.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty() || gender.isEmpty()) {
+        if (username.isEmpty() || fathername.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty() || gender.isEmpty() || contactNumber.isEmpty()) {
             Helper.Tools.show("Please fill out all fields.");
             return;
         }
@@ -197,7 +270,6 @@ public class UserAdd extends javax.swing.JFrame {
             return;
         }
 
-        // Validate email format (check if email contains '@')
         if (!email.contains("@")) {
             Helper.Tools.show("Invalid email! Please enter a valid email address.");
             return;
@@ -213,11 +285,15 @@ public class UserAdd extends javax.swing.JFrame {
                 Helper.Tools.show("Username already exists!");
             } else {
                 String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
-                PreparedStatement insertPs = d.getConnection().prepareStatement("INSERT INTO users (username, password, email, gender) VALUES (?, ?, ?, ?)");
+                PreparedStatement insertPs = d.getConnection().prepareStatement(
+                        "INSERT INTO users (username, password, email, gender, fathername, contact_number) VALUES (?, ?, ?, ?, ?, ?)"
+                );
                 insertPs.setString(1, username);
                 insertPs.setString(2, hashedPassword);
                 insertPs.setString(3, email);
                 insertPs.setString(4, gender);
+                insertPs.setString(5, fathername);
+                insertPs.setString(6, contactNumber);
 
                 int rowsAffected = insertPs.executeUpdate();
                 if (rowsAffected > 0) {
@@ -230,18 +306,56 @@ public class UserAdd extends javax.swing.JFrame {
         } catch (Exception e) {
             e.printStackTrace();
             Helper.Tools.show("An unexpected error occurred.");
-        }
-    }//GEN-LAST:event_btn_register_registerationActionPerformed
+        }    }//GEN-LAST:event_btn_register_registerationActionPerformed
+
+    private void fathername_registerationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fathername_registerationActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fathername_registerationActionPerformed
+
+    private void password_registeration_CNfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_password_registeration_CNfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_password_registeration_CNfActionPerformed
+
+    private void contactNumber_registerationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactNumber_registerationActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_contactNumber_registerationActionPerformed
 
     private void username_registerationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_username_registerationActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_username_registerationActionPerformed
 
-    private void UserAdd_backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserAdd_backMouseClicked
+    private void checkbox_showpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkbox_showpasswordActionPerformed
         // TODO add your handling code here:
+
+        if (checkbox_showpassword.isSelected()) {
+            // Show password
+            password_registeration.setEchoChar((char) 0);
+            password_registeration_CNf.setEchoChar((char) 0);
+        } else {
+            // Hide password
+            password_registeration.setEchoChar('\u2022'); // default bullet char, or use '*'
+            password_registeration_CNf.setEchoChar('\u2022');
+        }
+    }//GEN-LAST:event_checkbox_showpasswordActionPerformed
+
+    private void btn_reset_registerationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_reset_registerationActionPerformed
+        // TODO add your handling code here:
+
+        username_registeration.setText("");
+        fathername_registeration.setText("");
+        password_registeration.setText("");
+        password_registeration_CNf.setText("");
+        email_registration.setText("");
+        contactNumber_registeration.setText("");
+
+    }//GEN-LAST:event_btn_reset_registerationActionPerformed
+
+    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
+        // TODO add your handling code here:
+
         new Login().setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_UserAdd_backMouseClicked
+    }//GEN-LAST:event_backMouseClicked
 
     /**
      * @param args the command line arguments
@@ -279,21 +393,29 @@ public class UserAdd extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel UserAdd_back;
+    private javax.swing.JLabel back;
     private javax.swing.JButton btn_cancel_registeration;
     private javax.swing.JButton btn_register_registeration;
+    private javax.swing.JButton btn_reset_registeration;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JCheckBox checkbox_showpassword;
+    private javax.swing.JTextField contactNumber_registeration;
     private javax.swing.JTextField email_registration;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField fathername_registeration;
+    private javax.swing.JLabel gif_lbl;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLayeredPane jLayeredPane1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JPasswordField password_registeration;
     private javax.swing.JPasswordField password_registeration_CNf;
     private javax.swing.JRadioButton radiobtn_female;

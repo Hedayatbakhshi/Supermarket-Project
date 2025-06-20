@@ -112,7 +112,7 @@ public class UserList extends javax.swing.JFrame {
 
     DAL d = new DAL();
 
-    Object[][] result = d.select("SELECT user_id, username FROM users");
+    Object[][] result = d.select("SELECT user_id, username, password FROM users");
     String[] title = {"ID", "Username"};
 
     DefaultTableModel model = new DefaultTableModel(result, title);
@@ -189,7 +189,7 @@ public class UserList extends javax.swing.JFrame {
 
     private void Home_backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Home_backMouseClicked
         // TODO add your handling code here:
-        new Home().setVisible(true);
+        new Dashboard().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_Home_backMouseClicked
 

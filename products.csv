@@ -1,0 +1,1165 @@
+product_id,product_name,unit_price,category,product_date,expire_date,unit
+2,Banana,0.3,Fruits,2025-06-22,2026-06-06,kg
+3,Carrot,0.2,Vegetables,2025-06-20,2026-06-23,
+4,Broccoli,0.4,Vegetables,0000-00-00,0000-00-00,
+5,Chicken Breast,5,Meat,0000-00-00,0000-00-00,
+6,Salmon Fillet,8,Fish,0000-00-00,0000-00-00,
+7,Milk,1.2,Dairy,0000-00-00,0000-00-00,
+8,Cheese,2.5,Dairy,0000-00-00,0000-00-00,
+9,Bread,1,Bakery,0000-00-00,0000-00-00,Kg
+10,Rice,0.8,Grains,0000-00-00,0000-00-00,
+11,Apple,0.5,Fruits,0000-00-00,0000-00-00,
+12,Orange,0.6,Fruits,0000-00-00,0000-00-00,
+13,Potato,0.4,Vegetables,0000-00-00,0000-00-00,
+14,Eggs,2,Dairy,0000-00-00,0000-00-00,
+15,Yogurt,1.5,Dairy,0000-00-00,0000-00-00,
+16,Pasta,1.2,Grains,0000-00-00,0000-00-00,
+17,Olive Oil,3,Condiments,0000-00-00,0000-00-00,ml
+18,Sugar,0.7,Condiments,0000-00-00,0000-00-00,ml
+19,Salt,0.1,Condiments,0000-00-00,0000-00-00,ml
+20,Pepper,0.2,Condiments,0000-00-00,0000-00-00,ml
+21,Lettuce,0.5,Vegetables,0000-00-00,0000-00-00,
+22,Tomato,0.6,Vegetables,0000-00-00,0000-00-00,
+23,Cucumber,0.4,Vegetables,0000-00-00,0000-00-00,
+24,Onion,0.3,Vegetables,0000-00-00,0000-00-00,
+25,Garlic,0.2,Vegetables,0000-00-00,0000-00-00,
+26,Beef Steak,10,Meat,0000-00-00,0000-00-00,
+28,Shrimp,12,Fish,0000-00-00,0000-00-00,
+29,Tuna Can,1.5,Fish,0000-00-00,0000-00-00,
+30,Butter,1.8,Dairy,0000-00-00,0000-00-00,
+31,Whole Wheat Bread,1.2,Bakery,0000-00-00,0000-00-00,Kg
+32,Croissant,1.5,Bakery,0000-00-00,0000-00-00,Kg
+33,Bagel,1,Bakery,0000-00-00,0000-00-00,Kg
+34,Granola Bar,0.8,Snacks,0000-00-00,0000-00-00,
+35,Potato Chips,1,Snacks,0000-00-00,0000-00-00,
+36,Chocolate Bar,1.2,Snacks,0000-00-00,0000-00-00,
+37,Ice Cream,3,Desserts,0000-00-00,0000-00-00,
+38,Cake Mix,2.5,Desserts,0000-00-00,0000-00-00,
+39,Cookies,2,Desserts,0000-00-00,0000-00-00,
+40,Brownies Mix,2.5,Desserts,0000-00-00,0000-00-00,
+41,Spinach,0.5,Vegetables,0000-00-00,0000-00-00,
+42,Kale,0.6,Vegetables,0000-00-00,0000-00-00,
+43,Zucchini,0.4,Vegetables,0000-00-00,0000-00-00,
+44,Bell Pepper,0.7,Vegetables,0000-00-00,0000-00-00,
+45,Cauliflower,0.8,Vegetables,0000-00-00,0000-00-00,
+46,Ground Beef,6,Meat,0000-00-00,0000-00-00,
+47,Turkey Breast,5.5,Meat,0000-00-00,0000-00-00,
+48,Cod Fillet,9,Fish,0000-00-00,0000-00-00,
+49,Sardines Can,1.2,Fish,0000-00-00,0000-00-00,
+50,Cream Cheese,2,Dairy,0000-00-00,0000-00-00,
+51,Feta Cheese,2.5,Dairy,0000-00-00,0000-00-00,
+52,Greek Yogurt,1.8,Dairy,0000-00-00,0000-00-00,
+53,Almond Milk,1.5,Dairy,0000-00-00,0000-00-00,
+54,Soy Milk,1.4,Dairy,0000-00-00,0000-00-00,
+55,Oat Milk,1.6,Dairy,0000-00-00,0000-00-00,
+56,Whole Grain Pasta,1.3,Grains,0000-00-00,0000-00-00,
+57,Quinoa,2,Grains,0000-00-00,0000-00-00,
+58,Couscous,1.5,Grains,0000-00-00,0000-00-00,
+59,Brown Rice,0.9,Grains,0000-00-00,0000-00-00,
+60,Balsamic Vinegar,2,Condiments,0000-00-00,0000-00-00,ml
+63,Sparkling Water,1,Beverages,0000-00-00,0000-00-00,ml
+64,Green Tea,2,Beverages,0000-00-00,0000-00-00,ml
+65,Black Tea,1.5,Beverages,0000-00-00,0000-00-00,ml
+66,Coffee Beans,3,Beverages,0000-00-00,0000-00-00,ml
+67,Instant Coffee,2.5,Beverages,0000-00-00,0000-00-00,ml
+68,Orange Juice,1.8,Beverages,0000-00-00,0000-00-00,ml
+69,Apple Juice,1.5,Beverages,0000-00-00,0000-00-00,ml
+70,Lemonade,1.2,Beverages,0000-00-00,0000-00-00,ml
+71,Coconut Water,2,Beverages,0000-00-00,0000-00-00,ml
+73,Protein Shake,3.5,Beverages,0000-00-00,0000-00-00,ml
+74,Sports Drink,2,Beverages,0000-00-00,0000-00-00,ml
+75,Energy Drink,2.5,Beverages,0000-00-00,0000-00-00,ml
+76,Herbal Tea,1.8,Beverages,0000-00-00,0000-00-00,ml
+77,Chai Tea,2,Beverages,0000-00-00,0000-00-00,ml
+78,Hot Chocolate Mix,1.5,Beverages,0000-00-00,0000-00-00,ml
+79,Sparkling Juice,2,Beverages,0000-00-00,0000-00-00,ml
+80,Flavored Water,1,Beverages,0000-00-00,0000-00-00,ml
+81,Cranberry Juice,1.8,Beverages,0000-00-00,0000-00-00,ml
+82,Grape Juice,1.5,Beverages,0000-00-00,0000-00-00,ml
+83,Tomato Juice,1.2,Beverages,0000-00-00,0000-00-00,ml
+84,Carrot Juice,1.5,Beverages,0000-00-00,0000-00-00,ml
+85,Beet Juice,2,Beverages,0000-00-00,0000-00-00,ml
+86,Pineapple Juice,1.8,Beverages,0000-00-00,0000-00-00,ml
+87,Mango Juice,2,Beverages,0000-00-00,0000-00-00,ml
+88,Peach Juice,1.5,Beverages,0000-00-00,0000-00-00,ml
+89,Berry Smoothie Mix,3,Beverages,0000-00-00,0000-00-00,ml
+90,Green Smoothie Mix,3.5,Beverages,0000-00-00,0000-00-00,ml
+91,Frozen Vegetables,2,Frozen Foods,0000-00-00,0000-00-00,
+92,Frozen Fruits,2.5,Frozen Foods,0000-00-00,0000-00-00,
+93,Frozen Pizza,5,Frozen Foods,0000-00-00,0000-00-00,
+94,Frozen Meals,4,Frozen Foods,0000-00-00,0000-00-00,
+95,Ice Cream Bars,3,Frozen Foods,0000-00-00,0000-00-00,
+96,Frozen Fish Fillets,6,Frozen Foods,0000-00-00,0000-00-00,
+97,Frozen Chicken Nuggets,4.5,Frozen Foods,0000-00-00,0000-00-00,
+98,Frozen French Fries,2,Frozen Foods,0000-00-00,0000-00-00,
+99,Frozen Vegetables Mix,2.5,Frozen Foods,0000-00-00,0000-00-00,
+100,Frozen Smoothie Packs,3.5,Frozen Foods,0000-00-00,0000-00-00,
+101,Frozen Berries,3,Frozen Foods,0000-00-00,0000-00-00,
+102,Frozen Spinach,2,Frozen Foods,0000-00-00,0000-00-00,
+103,Frozen Broccoli,2.5,Frozen Foods,0000-00-00,0000-00-00,
+104,Frozen Cauliflower,2,Frozen Foods,0000-00-00,0000-00-00,
+105,Frozen Mixed Vegetables,2.5,Frozen Foods,0000-00-00,0000-00-00,
+106,Frozen Corn,1.5,Frozen Foods,0000-00-00,0000-00-00,
+107,Frozen Peas,1.5,Frozen Foods,0000-00-00,0000-00-00,
+108,Frozen Edamame,3,Frozen Foods,0000-00-00,0000-00-00,
+109,Frozen Sweet Potatoes,2,Frozen Foods,0000-00-00,0000-00-00,
+110,Frozen Butternut Squash,2.5,Frozen Foods,0000-00-00,0000-00-00,
+111,Avocado,1.5,Fruits,0000-00-00,0000-00-00,
+112,Pineapple,1.8,Fruits,0000-00-00,0000-00-00,
+113,Mango,1.5,Fruits,0000-00-00,0000-00-00,
+114,Strawberries,2.5,Fruits,0000-00-00,0000-00-00,
+115,Blueberries,3,Fruits,0000-00-00,0000-00-00,
+116,Raspberries,3.2,Fruits,0000-00-00,0000-00-00,
+117,Blackberries,3.2,Fruits,0000-00-00,0000-00-00,
+118,Cabbage,0.6,Vegetables,0000-00-00,0000-00-00,
+119,Brussels Sprouts,1.2,Vegetables,0000-00-00,0000-00-00,
+120,Asparagus,2.5,Vegetables,0000-00-00,0000-00-00,
+121,Artichoke,2.8,Vegetables,0000-00-00,0000-00-00,
+122,Radish,0.4,Vegetables,0000-00-00,0000-00-00,
+123,Celery,0.5,Vegetables,0000-00-00,0000-00-00,
+129,Tuna Steak,9.5,Fish,0000-00-00,0000-00-00,
+130,Trout Fillet,8.5,Fish,0000-00-00,0000-00-00,
+131,Hummus,2.5,Snacks,0000-00-00,0000-00-00,
+132,Guacamole,3,Snacks,0000-00-00,0000-00-00,
+133,Pita Chips,1.8,Snacks,0000-00-00,0000-00-00,
+134,Rice Cakes,1.2,Snacks,0000-00-00,0000-00-00,
+135,Trail Mix,2.5,Snacks,0000-00-00,0000-00-00,
+136,Granola,3.5,Snacks,0000-00-00,0000-00-00,
+137,Popcorn,1.5,Snacks,0000-00-00,0000-00-00,
+138,Dark Chocolate,2.8,Snacks,0000-00-00,0000-00-00,
+139,Fruit Snacks,1.5,Snacks,0000-00-00,0000-00-00,
+140,Protein Bars,2.5,Snacks,0000-00-00,0000-00-00,
+141,Cheese Crackers,1.8,Snacks,0000-00-00,0000-00-00,
+142,Nut Butter,3.2,Condiments,0000-00-00,0000-00-00,ml
+143,Honey,2.5,Condiments,0000-00-00,0000-00-00,ml
+144,Maple Syrup,3.5,Condiments,0000-00-00,0000-00-00,ml
+145,Mustard,0.8,Condiments,0000-00-00,0000-00-00,ml
+146,Ketchup,1.2,Condiments,0000-00-00,0000-00-00,ml
+147,Hot Sauce,1.5,Condiments,0000-00-00,0000-00-00,ml
+148,Soy Sauce,1.5,Condiments,0000-00-00,0000-00-00,ml
+149,Teriyaki Sauce,2.5,Condiments,0000-00-00,0000-00-00,ml
+150,Barbecue Sauce,2.8,Condiments,0000-00-00,0000-00-00,ml
+151,Salsa,1.8,Condiments,0000-00-00,0000-00-00,ml
+152,Pesto,3.5,Condiments,0000-00-00,0000-00-00,ml
+153,Coconut Oil,3.2,Condiments,0000-00-00,0000-00-00,ml
+154,Sesame Oil,2.5,Condiments,0000-00-00,0000-00-00,ml
+155,Rice Vinegar,1.5,Condiments,0000-00-00,0000-00-00,ml
+156,Apple Cider Vinegar,1.8,Condiments,0000-00-00,0000-00-00,ml
+157,Chili Paste,2.5,Condiments,0000-00-00,0000-00-00,ml
+158,Coconut Milk,2.5,Condiments,0000-00-00,0000-00-00,ml
+159,Almond Butter,3.5,Condiments,0000-00-00,0000-00-00,ml
+160,Peanut Butter,2.8,Condiments,0000-00-00,0000-00-00,ml
+161,Cashew Butter,3.2,Condiments,0000-00-00,0000-00-00,ml
+162,Tahini,2.5,Condiments,0000-00-00,0000-00-00,ml
+163,Chia Seeds,1.8,Condiments,0000-00-00,0000-00-00,ml
+164,Flaxseeds,1.5,Condiments,0000-00-00,0000-00-00,ml
+165,Pumpkin Seeds,2.5,Condiments,0000-00-00,0000-00-00,ml
+166,Sunflower Seeds,1.8,Condiments,0000-00-00,0000-00-00,ml
+167,Sesame Seeds,1.5,Condiments,0000-00-00,0000-00-00,ml
+168,Chickpeas,1.2,Grains,0000-00-00,0000-00-00,
+169,Lentils,1.5,Grains,0000-00-00,0000-00-00,
+170,Black Beans,1.2,Grains,0000-00-00,0000-00-00,
+171,Kidney Beans,1.5,Grains,0000-00-00,0000-00-00,
+172,Pinto Beans,1.2,Grains,0000-00-00,0000-00-00,
+173,Split Peas,1.5,Grains,0000-00-00,0000-00-00,
+174,Farro,2.5,Grains,0000-00-00,0000-00-00,
+175,Barley,1.8,Grains,0000-00-00,0000-00-00,
+176,Bulgur Wheat,1.5,Grains,0000-00-00,0000-00-00,
+177,Millet,2.2,Grains,0000-00-00,0000-00-00,
+178,Multigrain Bread,2,Bakery,0000-00-00,0000-00-00,Kg
+179,Banana Chips,1.8,Snacks,0000-00-00,0000-00-00,
+180,Sunflower Oil,2.2,Condiments,0000-00-00,0000-00-00,ml
+181,Brown Sugar,1.3,Condiments,0000-00-00,0000-00-00,ml
+182,Dried Apricots,2.5,Snacks,0000-00-00,0000-00-00,
+183,Cottage Cheese,2,Dairy,0000-00-00,0000-00-00,
+184,Red Lentils,1.6,Grains,0000-00-00,0000-00-00,
+185,Sweet Corn,1.1,Vegetables,0000-00-00,0000-00-00,
+186,Dates,2.8,Fruits,0000-00-00,0000-00-00,
+187,Pumpkin Seeds,2.3,Snacks,0000-00-00,0000-00-00,
+188,Pear,0.7,Fruits,0000-00-00,0000-00-00,
+189,Dried Figs,2.6,Snacks,0000-00-00,0000-00-00,
+190,Chickpea Flour,1.9,Grains,0000-00-00,0000-00-00,
+191,Green Peas,1.2,Vegetables,0000-00-00,0000-00-00,
+192,Apple Cider,1.7,Beverages,0000-00-00,0000-00-00,ml
+193,Rice Crackers,1.4,Snacks,0000-00-00,0000-00-00,
+194,Mozzarella Cheese,2.3,Dairy,0000-00-00,0000-00-00,
+195,Cranberries,2.2,Fruits,0000-00-00,0000-00-00,
+196,Whole Wheat Flour,1.5,Grains,0000-00-00,0000-00-00,
+197,Ghee,3,Dairy,0000-00-00,0000-00-00,
+198,Coconut Water,1.8,Beverages,0000-00-00,0000-00-00,ml
+199,Almond Butter,2.5,Condiments,0000-00-00,0000-00-00,ml
+200,Oatmeal Cookies,1.9,Snacks,0000-00-00,0000-00-00,
+201,Frozen Berries,2.4,Fruits,0000-00-00,0000-00-00,
+202,Quinoa,2,Grains,0000-00-00,0000-00-00,
+203,Greek Yogurt,2.6,Dairy,0000-00-00,0000-00-00,
+204,Honey Roasted Nuts,2.7,Snacks,0000-00-00,0000-00-00,
+205,Avocado Oil,3.5,Condiments,0000-00-00,0000-00-00,ml
+206,Whole Grain Pasta,1.8,Grains,0000-00-00,0000-00-00,
+207,Herbal Tea,1.5,Beverages,0000-00-00,0000-00-00,ml
+208,Dark Chocolate,2.9,Snacks,0000-00-00,0000-00-00,
+209,Organic Soy Milk,1.6,Dairy,0000-00-00,0000-00-00,
+210,Couscous,1.7,Grains,0000-00-00,0000-00-00,
+211,Roasted Chickpeas,1.4,Snacks,0000-00-00,0000-00-00,
+212,Fresh Basil,0.8,Vegetables,0000-00-00,0000-00-00,
+213,Lemon Juice,1.2,Condiments,0000-00-00,0000-00-00,ml
+214,Rice Noodles,1.5,Grains,0000-00-00,0000-00-00,
+215,Coconut Milk,2,Condiments,0000-00-00,0000-00-00,ml
+216,Granola Bars,1.9,Snacks,0000-00-00,0000-00-00,
+217,Herbal Infusion,1.3,Beverages,0000-00-00,0000-00-00,ml
+218,Spelt Bread,2.1,Bakery,0000-00-00,0000-00-00,Kg
+219,Roasted Seaweed,1,Snacks,0000-00-00,0000-00-00,
+220,Almond Milk,1.8,Dairy,0000-00-00,0000-00-00,
+221,Chia Seeds,2.4,Condiments,0000-00-00,0000-00-00,ml
+222,Frozen Spinach,1.5,Vegetables,0000-00-00,0000-00-00,
+223,Organic Honey,3.2,Condiments,0000-00-00,0000-00-00,ml
+224,Pistachios,2.9,Snacks,0000-00-00,0000-00-00,
+225,Cacao Nibs,2.6,Snacks,0000-00-00,0000-00-00,
+226,Sesame Oil,2.3,Condiments,0000-00-00,0000-00-00,ml
+227,Whole Wheat Bread,1.7,Bakery,0000-00-00,0000-00-00,Kg
+228,Basmati Rice,1.9,Grains,0000-00-00,0000-00-00,
+229,Organic Tomato Sauce,2.1,Condiments,0000-00-00,0000-00-00,ml
+230,Frozen Mixed Vegetables,1.4,Vegetables,0000-00-00,0000-00-00,
+231,Coconut Flour,2,Grains,0000-00-00,0000-00-00,
+232,Roasted Almonds,2.5,Snacks,0000-00-00,0000-00-00,
+233,Green Tea,1.6,Beverages,0000-00-00,0000-00-00,ml
+234,Organic Peanut Butter,2.7,Condiments,0000-00-00,0000-00-00,ml
+235,Whole Grain Crackers,1.8,Snacks,0000-00-00,0000-00-00,
+236,Fresh Cilantro,0.9,Vegetables,0000-00-00,0000-00-00,
+237,Oat Milk,1.5,Dairy,0000-00-00,0000-00-00,
+238,Apricot Jam,2.2,Condiments,0000-00-00,0000-00-00,ml
+239,Sunflower Seeds,1.7,Snacks,0000-00-00,0000-00-00,
+240,Dried Mango,2.8,Snacks,0000-00-00,0000-00-00,
+241,Brown Mushrooms,1.3,Vegetables,0000-00-00,0000-00-00,
+242,Red Grapes,2.1,Fruits,0000-00-00,0000-00-00,
+243,Sweet Potato Chips,2,Snacks,0000-00-00,0000-00-00,
+244,Edam Cheese,2.6,Dairy,0000-00-00,0000-00-00,
+245,Rye Bread,1.9,Bakery,0000-00-00,0000-00-00,Kg
+246,Pear Juice,1.6,Beverages,0000-00-00,0000-00-00,ml
+247,Coconut Yogurt,2.4,Dairy,0000-00-00,0000-00-00,
+248,Pumpkin Puree,2.1,Condiments,0000-00-00,0000-00-00,ml
+249,Dried Cranberries,2.3,Snacks,0000-00-00,0000-00-00,
+250,Red Kidney Beans,1.4,Grains,0000-00-00,0000-00-00,
+251,Whole Grain Rice,1.8,Grains,0000-00-00,0000-00-00,
+252,Fresh Mint,0.7,Vegetables,0000-00-00,0000-00-00,
+253,Hazelnuts,3,Snacks,0000-00-00,0000-00-00,
+254,Rice Pudding,2.2,Desserts,0000-00-00,0000-00-00,
+255,Cucumber Pickles,1.5,Condiments,0000-00-00,0000-00-00,ml
+256,Lime Juice,1.3,Condiments,0000-00-00,0000-00-00,ml
+257,Dried Pineapple,2.7,Snacks,0000-00-00,0000-00-00,
+258,Dried Cherries,2.9,Snacks,0000-00-00,0000-00-00,
+259,Pomegranate,1.8,Fruits,0000-00-00,0000-00-00,
+260,Cantaloupe,1.5,Fruits,0000-00-00,0000-00-00,
+261,Watermelon,2.2,Fruits,0000-00-00,0000-00-00,
+262,Gala Apple,0.6,Fruits,0000-00-00,0000-00-00,
+263,Red Apple,0.6,Fruits,0000-00-00,0000-00-00,
+264,Green Apple,0.7,Fruits,0000-00-00,0000-00-00,
+265,Plum,0.8,Fruits,0000-00-00,0000-00-00,
+266,Nectarine,1.1,Fruits,0000-00-00,0000-00-00,
+267,Peach,1.2,Fruits,0000-00-00,0000-00-00,
+268,Apricot,1.3,Fruits,0000-00-00,0000-00-00,
+269,Kiwi,1,Fruits,0000-00-00,0000-00-00,
+270,Passion Fruit,1.5,Fruits,0000-00-00,0000-00-00,
+271,Guava,1.4,Fruits,0000-00-00,0000-00-00,
+272,Lychee,1.6,Fruits,0000-00-00,0000-00-00,
+273,Papaya,1.7,Fruits,0000-00-00,0000-00-00,
+274,Persimmon,1.8,Fruits,0000-00-00,0000-00-00,
+275,Starfruit,1.9,Fruits,0000-00-00,0000-00-00,
+276,Dragon Fruit,2.5,Fruits,0000-00-00,0000-00-00,
+277,Jackfruit,2.8,Fruits,0000-00-00,0000-00-00,
+278,Raisins,1.5,Snacks,0000-00-00,0000-00-00,
+279,Dried Blueberries,2.7,Snacks,0000-00-00,0000-00-00,
+280,Dried Strawberries,2.8,Snacks,0000-00-00,0000-00-00,
+281,Dried Banana,2,Snacks,0000-00-00,0000-00-00,
+282,Dried Coconut,2.1,Snacks,0000-00-00,0000-00-00,
+283,Dried Apple,1.9,Snacks,0000-00-00,0000-00-00,
+284,Dried Pear,2.2,Snacks,0000-00-00,0000-00-00,
+285,Dried Plum,2.3,Snacks,0000-00-00,0000-00-00,
+286,Dried Apricot,2.4,Snacks,0000-00-00,0000-00-00,
+287,Dried Fig,2.5,Snacks,0000-00-00,0000-00-00,
+288,Dried Date,2.6,Snacks,0000-00-00,0000-00-00,
+289,Dried Pineapple,2.7,Snacks,0000-00-00,0000-00-00,
+290,Dried Mango,2.8,Snacks,0000-00-00,0000-00-00,
+291,Dried Papaya,2.9,Snacks,0000-00-00,0000-00-00,
+292,Dried Cranberry,2.3,Snacks,0000-00-00,0000-00-00,
+293,Dried Goji Berry,3,Snacks,0000-00-00,0000-00-00,
+294,Dried Mulberry,2.9,Snacks,0000-00-00,0000-00-00,
+295,Dried Black Currant,2.8,Snacks,0000-00-00,0000-00-00,
+296,Dried White Mulberry,2.7,Snacks,0000-00-00,0000-00-00,
+297,Dried Persimmon,2.6,Snacks,0000-00-00,0000-00-00,
+298,Dried Starfruit,2.5,Snacks,0000-00-00,0000-00-00,
+299,Dried Dragon Fruit,2.4,Snacks,0000-00-00,0000-00-00,
+300,Dried Jackfruit,2.3,Snacks,0000-00-00,0000-00-00,
+301,Dried Passion Fruit,2.2,Snacks,0000-00-00,0000-00-00,
+302,Dried Guava,2.1,Snacks,0000-00-00,0000-00-00,
+303,Dried Lychee,2,Snacks,0000-00-00,0000-00-00,
+304,Dried Kiwi,1.9,Snacks,0000-00-00,0000-00-00,
+305,Dried Nectarine,1.8,Snacks,0000-00-00,0000-00-00,
+306,Dried Peach,1.7,Snacks,0000-00-00,0000-00-00,
+307,Dried Plum,1.6,Snacks,0000-00-00,0000-00-00,
+308,Dried Cherry,1.5,Snacks,0000-00-00,0000-00-00,
+309,Dried Raisin,1.4,Snacks,0000-00-00,0000-00-00,
+310,Dried Sultana,1.3,Snacks,0000-00-00,0000-00-00,
+311,Dried Currant,1.2,Snacks,0000-00-00,0000-00-00,
+312,Dried Prune,1.1,Snacks,0000-00-00,0000-00-00,
+313,Dried Medjool Date,2.9,Snacks,0000-00-00,0000-00-00,
+314,Dried Deglet Noor Date,2.8,Snacks,0000-00-00,0000-00-00,
+315,Dried Barhi Date,2.7,Snacks,0000-00-00,0000-00-00,
+316,Dried Zahidi Date,2.6,Snacks,0000-00-00,0000-00-00,
+317,Dried Halawi Date,2.5,Snacks,0000-00-00,0000-00-00,
+318,Dried Khadrawy Date,2.4,Snacks,0000-00-00,0000-00-00,
+319,Dried Thoory Date,2.3,Snacks,0000-00-00,0000-00-00,
+320,Dried Dayri Date,2.2,Snacks,0000-00-00,0000-00-00,
+321,Dried Honey Date,2.1,Snacks,0000-00-00,0000-00-00,
+322,Dried Ajwa Date,3,Snacks,0000-00-00,0000-00-00,
+323,Dried Safawi Date,2.9,Snacks,0000-00-00,0000-00-00,
+324,Dried Mabroom Date,2.8,Snacks,0000-00-00,0000-00-00,
+325,Dried Sukkari Date,2.7,Snacks,0000-00-00,0000-00-00,
+326,Dried Anbara Date,2.6,Snacks,0000-00-00,0000-00-00,
+327,Dried Medjool Date,2.5,Snacks,0000-00-00,0000-00-00,
+328,Dried Deglet Noor Date,2.4,Snacks,0000-00-00,0000-00-00,
+329,Dried Barhi Date,2.3,Snacks,0000-00-00,0000-00-00,
+330,Dried Zahidi Date,2.2,Snacks,0000-00-00,0000-00-00,
+331,Dried Halawi Date,2.1,Snacks,0000-00-00,0000-00-00,
+332,Dried Khadrawy Date,2,Snacks,0000-00-00,0000-00-00,
+333,Dried Thoory Date,1.9,Snacks,0000-00-00,0000-00-00,
+334,Dried Dayri Date,1.8,Snacks,0000-00-00,0000-00-00,
+335,Dried Honey Date,1.7,Snacks,0000-00-00,0000-00-00,
+336,Dried Ajwa Date,3.1,Snacks,0000-00-00,0000-00-00,
+337,Dried Safawi Date,3,Snacks,0000-00-00,0000-00-00,
+338,Dried Mabroom Date,2.9,Snacks,0000-00-00,0000-00-00,
+339,Dried Sukkari Date,2.8,Snacks,0000-00-00,0000-00-00,
+340,Dried Anbara Date,2.7,Snacks,0000-00-00,0000-00-00,
+341,Dried Medjool Date,2.6,Snacks,0000-00-00,0000-00-00,
+342,Dried Deglet Noor Date,2.5,Snacks,0000-00-00,0000-00-00,
+343,Dried Barhi Date,2.4,Snacks,0000-00-00,0000-00-00,
+344,Dried Zahidi Date,2.3,Snacks,0000-00-00,0000-00-00,
+345,Dried Halawi Date,2.2,Snacks,0000-00-00,0000-00-00,
+346,Dried Khadrawy Date,2.1,Snacks,0000-00-00,0000-00-00,
+347,Dried Thoory Date,2,Snacks,0000-00-00,0000-00-00,
+348,Dried Dayri Date,1.9,Snacks,0000-00-00,0000-00-00,
+349,Dried Honey Date,1.8,Snacks,0000-00-00,0000-00-00,
+350,Dried Ajwa Date,3.2,Snacks,0000-00-00,0000-00-00,
+351,Dried Safawi Date,3.1,Snacks,0000-00-00,0000-00-00,
+352,Dried Mabroom Date,3,Snacks,0000-00-00,0000-00-00,
+353,Dried Sukkari Date,2.9,Snacks,0000-00-00,0000-00-00,
+354,Dried Anbara Date,2.8,Snacks,0000-00-00,0000-00-00,
+355,Dried Medjool Date,2.7,Snacks,0000-00-00,0000-00-00,
+356,Dried Deglet Noor Date,2.6,Snacks,0000-00-00,0000-00-00,
+357,Dried Barhi Date,2.5,Snacks,0000-00-00,0000-00-00,
+358,Sweet Potato,0.8,Vegetables,0000-00-00,0000-00-00,
+359,Eggplant,0.7,Vegetables,0000-00-00,0000-00-00,
+360,Cherry Tomato,1.1,Vegetables,0000-00-00,0000-00-00,
+361,Arugula,0.9,Vegetables,0000-00-00,0000-00-00,
+362,Green Beans,0.6,Vegetables,0000-00-00,0000-00-00,
+363,Snow Peas,1.3,Vegetables,0000-00-00,0000-00-00,
+364,Okra,1.2,Vegetables,0000-00-00,0000-00-00,
+365,Turnip,0.5,Vegetables,0000-00-00,0000-00-00,
+366,Parsnip,0.8,Vegetables,0000-00-00,0000-00-00,
+367,Leek,1.2,Vegetables,0000-00-00,0000-00-00,
+368,Shallot,1.4,Vegetables,0000-00-00,0000-00-00,
+369,Spring Onion,0.7,Vegetables,0000-00-00,0000-00-00,
+370,Green Chili,0.5,Vegetables,0000-00-00,0000-00-00,
+371,Red Chili,0.6,Vegetables,0000-00-00,0000-00-00,
+372,Daikon Radish,1.3,Vegetables,0000-00-00,0000-00-00,
+373,Collard Greens,1.1,Vegetables,0000-00-00,0000-00-00,
+374,Mustard Greens,1.2,Vegetables,0000-00-00,0000-00-00,
+375,Swiss Chard,1.4,Vegetables,0000-00-00,0000-00-00,
+376,Watercress,1.5,Vegetables,0000-00-00,0000-00-00,
+377,Endive,1.5,Vegetables,0000-00-00,0000-00-00,
+378,Romaine Lettuce,1.2,Vegetables,0000-00-00,0000-00-00,
+379,Iceberg Lettuce,1,Vegetables,0000-00-00,0000-00-00,
+380,Escarole,1.3,Vegetables,0000-00-00,0000-00-00,
+381,Butter Lettuce,1.3,Vegetables,0000-00-00,0000-00-00,
+382,Pumpkin,1.8,Vegetables,0000-00-00,0000-00-00,
+383,Butternut Pumpkin,2.1,Vegetables,0000-00-00,0000-00-00,
+384,Acorn Squash,1.7,Vegetables,0000-00-00,0000-00-00,
+385,Spaghetti Squash,2,Vegetables,0000-00-00,0000-00-00,
+386,Kohlrabi,1.2,Vegetables,0000-00-00,0000-00-00,
+387,Fennel,1.7,Vegetables,0000-00-00,0000-00-00,
+388,Jerusalem Artichoke,2.5,Vegetables,0000-00-00,0000-00-00,
+389,Celeriac,2,Vegetables,0000-00-00,0000-00-00,
+390,Bok Choy,1.3,Vegetables,0000-00-00,0000-00-00,
+391,Napa Cabbage,1.5,Vegetables,0000-00-00,0000-00-00,
+392,Savoy Cabbage,1.5,Vegetables,0000-00-00,0000-00-00,
+393,Pak Choi,1.6,Vegetables,0000-00-00,0000-00-00,
+394,Mizuna,1.6,Vegetables,0000-00-00,0000-00-00,
+395,Tatsoi,1.7,Vegetables,0000-00-00,0000-00-00,
+396,Broccolini,2,Vegetables,0000-00-00,0000-00-00,
+397,Romanesco,2.3,Vegetables,0000-00-00,0000-00-00,
+398,Purple Cauliflower,2.4,Vegetables,0000-00-00,0000-00-00,
+399,Yellow Carrot,1,Vegetables,0000-00-00,0000-00-00,
+400,White Carrot,1,Vegetables,0000-00-00,0000-00-00,
+401,Baby Carrot,1.2,Vegetables,0000-00-00,0000-00-00,
+402,Golden Beet,1.5,Vegetables,0000-00-00,0000-00-00,
+403,Chioggia Beet,1.6,Vegetables,0000-00-00,0000-00-00,
+404,Green Pumpkin,1.6,Vegetables,0000-00-00,0000-00-00,
+405,Red Cabbage,1.2,Vegetables,0000-00-00,0000-00-00,
+406,Savory Cabbage,1.3,Vegetables,0000-00-00,0000-00-00,
+407,Yam,1.2,Vegetables,0000-00-00,0000-00-00,
+408,Plantain,1.7,Fruits,0000-00-00,0000-00-00,
+409,Sapote,2.2,Fruits,0000-00-00,0000-00-00,
+410,Longan,1.8,Fruits,0000-00-00,0000-00-00,
+411,Rambutan,2,Fruits,0000-00-00,0000-00-00,
+412,Mulberry,2.5,Fruits,0000-00-00,0000-00-00,
+413,Elderberry,3.5,Fruits,0000-00-00,0000-00-00,
+414,Gooseberry,2.6,Fruits,0000-00-00,0000-00-00,
+415,Currant,2.5,Fruits,0000-00-00,0000-00-00,
+416,Fig,2.8,Fruits,0000-00-00,0000-00-00,
+417,Soursop,3.2,Fruits,0000-00-00,0000-00-00,
+418,Salak,3,Fruits,0000-00-00,0000-00-00,
+419,Tamarind,1.7,Fruits,0000-00-00,0000-00-00,
+420,Cherimoya,3.1,Fruits,0000-00-00,0000-00-00,
+421,Breadfruit,2.7,Fruits,0000-00-00,0000-00-00,
+422,Jujube,2.3,Fruits,0000-00-00,0000-00-00,
+423,Medlar,2.2,Fruits,0000-00-00,0000-00-00,
+424,Loquat,2.1,Fruits,0000-00-00,0000-00-00,
+425,Quince,1.9,Fruits,0000-00-00,0000-00-00,
+426,White Grape,2,Fruits,0000-00-00,0000-00-00,
+427,Red Currant,2.2,Fruits,0000-00-00,0000-00-00,
+428,White Currant,2.2,Fruits,0000-00-00,0000-00-00,
+429,Prickly Pear,2.3,Fruits,0000-00-00,0000-00-00,
+430,Cloudberry,3.5,Fruits,0000-00-00,0000-00-00,
+431,Huckleberry,2.7,Fruits,0000-00-00,0000-00-00,
+432,Boysenberry,3,Fruits,0000-00-00,0000-00-00,
+433,Marionberry,3.2,Fruits,0000-00-00,0000-00-00,
+434,Cranberry,2.2,Fruits,0000-00-00,0000-00-00,
+435,Pawpaw,2.9,Fruits,0000-00-00,0000-00-00,
+436,Feijoa,2.7,Fruits,0000-00-00,0000-00-00,
+437,Miracle Fruit,4,Fruits,0000-00-00,0000-00-00,
+438,Ackee,2.5,Fruits,0000-00-00,0000-00-00,
+439,Carambola,2,Fruits,0000-00-00,0000-00-00,
+440,Bilberry,2.9,Fruits,0000-00-00,0000-00-00,
+441,Sea Buckthorn,2.4,Fruits,0000-00-00,0000-00-00,
+442,Rose Apple,2,Fruits,0000-00-00,0000-00-00,
+443,Sugar Apple,2.5,Fruits,0000-00-00,0000-00-00,
+444,Mangosteen,3.8,Fruits,0000-00-00,0000-00-00,
+445,Langsat,2.2,Fruits,0000-00-00,0000-00-00,
+446,Santol,2,Fruits,0000-00-00,0000-00-00,
+447,Pulasan,2.8,Fruits,0000-00-00,0000-00-00,
+448,Ambarella,2.3,Fruits,0000-00-00,0000-00-00,
+449,Wood Apple,2.7,Fruits,0000-00-00,0000-00-00,
+450,Black Sapote,3,Fruits,0000-00-00,0000-00-00,
+451,Cupuacu,3.2,Fruits,0000-00-00,0000-00-00,
+452,Bacaba,3,Fruits,0000-00-00,0000-00-00,
+453,Imbe,2.5,Fruits,0000-00-00,0000-00-00,
+454,Camu Camu,4,Fruits,0000-00-00,0000-00-00,
+455,Pepino Melon,2.7,Fruits,0000-00-00,0000-00-00,
+456,Tayberry,2.6,Fruits,0000-00-00,0000-00-00,
+457,White Sapote,2.8,Fruits,0000-00-00,0000-00-00,
+458,Naranjilla,3,Fruits,0000-00-00,0000-00-00,
+459,Babaco,2.5,Fruits,0000-00-00,0000-00-00,
+460,Calamansi,2.2,Fruits,0000-00-00,0000-00-00,
+461,Satsuma,2,Fruits,0000-00-00,0000-00-00,
+462,Dekopon,2.6,Fruits,0000-00-00,0000-00-00,
+463,Yuzu,2.4,Fruits,0000-00-00,0000-00-00,
+464,Kumquat,2.3,Fruits,0000-00-00,0000-00-00,
+465,Ugni,2.9,Fruits,0000-00-00,0000-00-00,
+466,Pluot,2.7,Fruits,0000-00-00,0000-00-00,
+467,Aprium,2.4,Fruits,0000-00-00,0000-00-00,
+468,Pineberry,3.1,Fruits,0000-00-00,0000-00-00,
+469,Plumcot,2.8,Fruits,0000-00-00,0000-00-00,
+470,Greengage,2.6,Fruits,0000-00-00,0000-00-00,
+471,Mirabelle,2.3,Fruits,0000-00-00,0000-00-00,
+472,Damson,2.2,Fruits,0000-00-00,0000-00-00,
+473,Sloe,2.1,Fruits,0000-00-00,0000-00-00,
+474,Medjool Date,3,Fruits,0000-00-00,0000-00-00,
+475,Pigeon Pea,1.8,Grains,0000-00-00,0000-00-00,
+476,Teff,2.4,Grains,0000-00-00,0000-00-00,
+477,Amaranth,2.2,Grains,0000-00-00,0000-00-00,
+478,Freekeh,2.3,Grains,0000-00-00,0000-00-00,
+479,Sorghum,2.1,Grains,0000-00-00,0000-00-00,
+480,Wild Rice,2.7,Grains,0000-00-00,0000-00-00,
+481,Buckwheat,2.2,Grains,0000-00-00,0000-00-00,
+482,Kamut,2.6,Grains,0000-00-00,0000-00-00,
+483,Fonio,3,Grains,0000-00-00,0000-00-00,
+484,Triticale,2.5,Grains,0000-00-00,0000-00-00,
+485,Quark,2.2,Dairy,0000-00-00,0000-00-00,
+486,Ricotta Cheese,2.1,Dairy,0000-00-00,0000-00-00,
+487,Mascarpone Cheese,2.7,Dairy,0000-00-00,0000-00-00,
+488,Paneer,2,Dairy,0000-00-00,0000-00-00,
+489,Labneh,2.2,Dairy,0000-00-00,0000-00-00,
+490,Skyr,2.4,Dairy,0000-00-00,0000-00-00,
+491,Kefir,2.3,Dairy,0000-00-00,0000-00-00,
+492,Double Cream,2.6,Dairy,0000-00-00,0000-00-00,
+493,Clotted Cream,2.8,Dairy,0000-00-00,0000-00-00,
+494,Sour Cream,1.9,Dairy,0000-00-00,0000-00-00,
+495,Whipping Cream,2.1,Dairy,0000-00-00,0000-00-00,
+496,Evaporated Milk,1.7,Dairy,0000-00-00,0000-00-00,
+497,Condensed Milk,1.8,Dairy,0000-00-00,0000-00-00,
+498,Dulce de Leche,2.3,Dairy,0000-00-00,0000-00-00,
+499,Buffalo Mozzarella,2.5,Dairy,0000-00-00,0000-00-00,
+500,Sheep Cheese,2.8,Dairy,0000-00-00,0000-00-00,
+501,Goat Cheese,2.7,Dairy,0000-00-00,0000-00-00,
+502,Halloumi,2.9,Dairy,0000-00-00,0000-00-00,
+503,Burrata,3,Dairy,0000-00-00,0000-00-00,
+504,Camembert,3.2,Dairy,0000-00-00,0000-00-00,
+505,Brie,3.1,Dairy,0000-00-00,0000-00-00,
+506,Roquefort,3.4,Dairy,0000-00-00,0000-00-00,
+507,Gouda,2.9,Dairy,0000-00-00,0000-00-00,
+508,Manchego,3.3,Dairy,0000-00-00,0000-00-00,
+509,Comte,3.2,Dairy,0000-00-00,0000-00-00,
+510,Gruyere,3.5,Dairy,0000-00-00,0000-00-00,
+511,Emmental,3.1,Dairy,0000-00-00,0000-00-00,
+512,Tilsit,2.7,Dairy,0000-00-00,0000-00-00,
+513,Jarlsberg,2.8,Dairy,0000-00-00,0000-00-00,
+514,Fontina,3,Dairy,0000-00-00,0000-00-00,
+515,Edam,2.9,Dairy,0000-00-00,0000-00-00,
+516,Colby Jack,2.6,Dairy,0000-00-00,0000-00-00,
+517,Monterey Jack,2.7,Dairy,0000-00-00,0000-00-00,
+518,Pepper Jack,2.8,Dairy,0000-00-00,0000-00-00,
+519,Swiss Cheese,2.9,Dairy,0000-00-00,0000-00-00,
+520,Provolone,2.5,Dairy,0000-00-00,0000-00-00,
+521,Queso Fresco,2.4,Dairy,0000-00-00,0000-00-00,
+522,Cotija,2.6,Dairy,0000-00-00,0000-00-00,
+523,Ricotta Salata,2.7,Dairy,0000-00-00,0000-00-00,
+524,Asiago,2.8,Dairy,0000-00-00,0000-00-00,
+525,Pepperoni,3,Snacks,0000-00-00,0000-00-00,
+526,Vegetable Crackers,1.8,Snacks,0000-00-00,0000-00-00,
+527,Cheddar Crackers,2.1,Snacks,0000-00-00,0000-00-00,
+528,Pretzels,1.5,Snacks,0000-00-00,0000-00-00,
+529,Rice Crisps,1.6,Snacks,0000-00-00,0000-00-00,
+530,Corn Chips,1.7,Snacks,0000-00-00,0000-00-00,
+531,Cornbread,1.9,Bakery,0000-00-00,0000-00-00,Kg
+532,Sourdough Bread,2.1,Bakery,0000-00-00,0000-00-00,Kg
+533,Focaccia,2.2,Bakery,0000-00-00,0000-00-00,Kg
+534,Ciabatta,2.2,Bakery,0000-00-00,0000-00-00,Kg
+535,Brioche,2.5,Bakery,0000-00-00,0000-00-00,Kg
+536,Pita Bread,1.7,Bakery,0000-00-00,0000-00-00,Kg
+537,Lavash,1.9,Bakery,0000-00-00,0000-00-00,Kg
+538,Tortilla,1.2,Bakery,0000-00-00,0000-00-00,Kg
+539,Naan,1.5,Bakery,0000-00-00,0000-00-00,Kg
+540,Roti,1.3,Bakery,0000-00-00,0000-00-00,Kg
+541,Chapati,1.1,Bakery,0000-00-00,0000-00-00,Kg
+542,Matzo,1.2,Bakery,0000-00-00,0000-00-00,Kg
+543,Baghrir,1.6,Bakery,0000-00-00,0000-00-00,Kg
+544,Crumpet,1.7,Bakery,0000-00-00,0000-00-00,Kg
+545,English Muffin,1.8,Bakery,0000-00-00,0000-00-00,Kg
+546,Scone,1.9,Bakery,0000-00-00,0000-00-00,Kg
+547,Danish,2.3,Bakery,0000-00-00,0000-00-00,Kg
+548,Baklava,2.2,Desserts,0000-00-00,0000-00-00,
+549,Maamoul,2.1,Desserts,0000-00-00,0000-00-00,
+550,Knafeh,3.4,Desserts,0000-00-00,0000-00-00,
+551,Basbousa,2.2,Desserts,0000-00-00,0000-00-00,
+552,Lokum,1.7,Desserts,0000-00-00,0000-00-00,
+553,Halva,2.5,Desserts,0000-00-00,0000-00-00,
+554,Rice Pudding,2,Desserts,0000-00-00,0000-00-00,
+555,Bread Pudding,2.2,Desserts,0000-00-00,0000-00-00,
+556,Fruit Tart,2.5,Desserts,0000-00-00,0000-00-00,
+557,Apple Pie,2.6,Desserts,0000-00-00,0000-00-00,
+558,Banana Bread,2.4,Bakery,0000-00-00,0000-00-00,Kg
+559,Carrot Cake,2.5,Desserts,0000-00-00,0000-00-00,
+560,Pumpkin Pie,2.7,Desserts,0000-00-00,0000-00-00,
+561,Date Bar,2.2,Desserts,0000-00-00,0000-00-00,
+562,Tahini Cookie,1.8,Desserts,0000-00-00,0000-00-00,
+563,Ghraybeh,2.2,Desserts,0000-00-00,0000-00-00,
+564,Qatayef,2.5,Desserts,0000-00-00,0000-00-00,
+565,Atayef,2.3,Desserts,0000-00-00,0000-00-00,
+566,Sambousek,2,Bakery,0000-00-00,0000-00-00,Kg
+567,Fatayer,2.1,Bakery,0000-00-00,0000-00-00,Kg
+568,Spinach Pie,2.3,Bakery,0000-00-00,0000-00-00,Kg
+569,Cheese Pie,2.4,Bakery,0000-00-00,0000-00-00,Kg
+570,Meat Pie,2.9,Bakery,0000-00-00,0000-00-00,Kg
+571,Potato Pie,2.2,Bakery,0000-00-00,0000-00-00,Kg
+572,Egg Pie,2,Bakery,0000-00-00,0000-00-00,Kg
+573,Veggie Pizza,3.5,Bakery,0000-00-00,0000-00-00,Kg
+574,Margherita Pizza,3.7,Bakery,0000-00-00,0000-00-00,Kg
+575,Cheese Pizza,3.8,Bakery,0000-00-00,0000-00-00,Kg
+576,Mushroom Pizza,3.9,Bakery,0000-00-00,0000-00-00,Kg
+577,Olive Pizza,4,Bakery,0000-00-00,0000-00-00,Kg
+578,Pepper Pizza,3.6,Bakery,0000-00-00,0000-00-00,Kg
+579,Four Cheese Pizza,4.2,Bakery,0000-00-00,0000-00-00,Kg
+580,Vegetable Lasagna,3.5,Bakery,0000-00-00,0000-00-00,Kg
+581,Macaroni Pie,2.5,Bakery,0000-00-00,0000-00-00,Kg
+582,Corn Salad,2.3,Vegetables,0000-00-00,0000-00-00,
+583,Coleslaw,2.1,Vegetables,0000-00-00,0000-00-00,
+584,Potato Salad,2,Vegetables,0000-00-00,0000-00-00,
+585,Tabbouleh,2.4,Vegetables,0000-00-00,0000-00-00,
+586,Fattoush,2.3,Vegetables,0000-00-00,0000-00-00,
+587,Hendbeh,2.5,Vegetables,0000-00-00,0000-00-00,
+588,Egg Salad,2.2,Vegetables,0000-00-00,0000-00-00,
+589,Tuna Salad,2.5,Vegetables,0000-00-00,0000-00-00,
+590,Chicken Salad,3,Vegetables,0000-00-00,0000-00-00,
+591,Bean Salad,2.3,Vegetables,0000-00-00,0000-00-00,
+592,Lentil Soup,2.5,Vegetables,0000-00-00,0000-00-00,
+593,Vegetable Soup,2.2,Vegetables,0000-00-00,0000-00-00,
+594,Tomato Soup,2.1,Vegetables,0000-00-00,0000-00-00,
+595,Mushroom Soup,2.3,Vegetables,0000-00-00,0000-00-00,
+596,Spinach Soup,2.5,Vegetables,0000-00-00,0000-00-00,
+597,Pumpkin Soup,2.6,Vegetables,0000-00-00,0000-00-00,
+598,Carrot Soup,2.1,Vegetables,0000-00-00,0000-00-00,
+599,Pea Soup,2.2,Vegetables,0000-00-00,0000-00-00,
+610,Chai Tea,1.9,Beverages,0000-00-00,0000-00-00,ml
+611,Matcha Latte,2.5,Beverages,0000-00-00,0000-00-00,ml
+612,Golden Milk,2.3,Beverages,0000-00-00,0000-00-00,ml
+613,Yerba Mate,2.4,Beverages,0000-00-00,0000-00-00,ml
+614,Kava,2.6,Beverages,0000-00-00,0000-00-00,ml
+615,Rooibos Tea,1.7,Beverages,0000-00-00,0000-00-00,ml
+616,Ginseng Tea,2.8,Beverages,0000-00-00,0000-00-00,ml
+617,Peppermint Tea,1.6,Beverages,0000-00-00,0000-00-00,ml
+618,Chamomile Tea,1.5,Beverages,0000-00-00,0000-00-00,ml
+619,Lemon Balm Tea,1.4,Beverages,0000-00-00,0000-00-00,ml
+700,Jackfruit Seeds,2.1,Snacks,0000-00-00,0000-00-00,
+701,Bamboo Shoots,1.6,Vegetables,0000-00-00,0000-00-00,
+702,Lotus Root,2.3,Vegetables,0000-00-00,0000-00-00,
+703,Water Chestnuts,2.2,Vegetables,0000-00-00,0000-00-00,
+704,Fiddlehead Ferns,2.8,Vegetables,0000-00-00,0000-00-00,
+705,Roman Beans,1.5,Grains,0000-00-00,0000-00-00,
+706,Parsley,0.7,Vegetables,0000-00-00,0000-00-00,
+707,Dill,0.6,Vegetables,0000-00-00,0000-00-00,
+708,Tarragon,0.9,Vegetables,0000-00-00,0000-00-00,
+709,Marjoram,0.8,Vegetables,0000-00-00,0000-00-00,
+710,Savory,0.7,Vegetables,0000-00-00,0000-00-00,
+711,Lemon Balm,0.9,Vegetables,0000-00-00,0000-00-00,
+712,Lovage,1.1,Vegetables,0000-00-00,0000-00-00,
+713,Salsify,1.3,Vegetables,0000-00-00,0000-00-00,
+714,Butter Beans,1.6,Grains,0000-00-00,0000-00-00,
+715,Cranberry Beans,1.8,Grains,0000-00-00,0000-00-00,
+716,Black Soybeans,2.1,Grains,0000-00-00,0000-00-00,
+717,Fava Beans,2.2,Grains,0000-00-00,0000-00-00,
+718,Romanesco Broccoli,2.5,Vegetables,0000-00-00,0000-00-00,
+719,Purple Sprouting Broccoli,2.4,Vegetables,0000-00-00,0000-00-00,
+720,Microgreens,3.1,Vegetables,0000-00-00,0000-00-00,
+721,Nasturtium,2.2,Vegetables,0000-00-00,0000-00-00,
+722,Edible Flowers,2.8,Vegetables,0000-00-00,0000-00-00,
+723,Cress,1.2,Vegetables,0000-00-00,0000-00-00,
+724,Sorrel,1.3,Vegetables,0000-00-00,0000-00-00,
+725,Chervil,0.8,Vegetables,0000-00-00,0000-00-00,
+726,Mizuna Greens,1.5,Vegetables,0000-00-00,0000-00-00,
+727,Purslane,1.1,Vegetables,0000-00-00,0000-00-00,
+728,Rocket,1.2,Vegetables,0000-00-00,0000-00-00,
+729,Samphire,2.7,Vegetables,0000-00-00,0000-00-00,
+730,Sea Asparagus,2.9,Vegetables,0000-00-00,0000-00-00,
+731,Sugar Snap Peas,1.9,Vegetables,0000-00-00,0000-00-00,
+732,Pattypan Squash,2.1,Vegetables,0000-00-00,0000-00-00,
+733,Chayote,1.8,Vegetables,0000-00-00,0000-00-00,
+734,Jicama,1.4,Vegetables,0000-00-00,0000-00-00,
+735,Tinda,1.7,Vegetables,0000-00-00,0000-00-00,
+736,Snake Gourd,2.2,Vegetables,0000-00-00,0000-00-00,
+737,Bitter Melon,2.1,Vegetables,0000-00-00,0000-00-00,
+738,Ridge Gourd,1.8,Vegetables,0000-00-00,0000-00-00,
+739,Bottle Gourd,1.7,Vegetables,0000-00-00,0000-00-00,
+740,Apple Gourd,1.6,Vegetables,0000-00-00,0000-00-00,
+741,Ash Gourd,1.5,Vegetables,0000-00-00,0000-00-00,
+742,Cluster Beans,1.7,Vegetables,0000-00-00,0000-00-00,
+743,Winged Beans,2,Vegetables,0000-00-00,0000-00-00,
+744,Yardlong Beans,2,Vegetables,0000-00-00,0000-00-00,
+745,Roman Lettuce,1.4,Vegetables,0000-00-00,0000-00-00,
+746,Ice Plant,2.3,Vegetables,0000-00-00,0000-00-00,
+747,Broccoli Rabe,2.2,Vegetables,0000-00-00,0000-00-00,
+748,Tatsoi Greens,1.8,Vegetables,0000-00-00,0000-00-00,
+749,Komatsuna,1.9,Vegetables,0000-00-00,0000-00-00,
+750,Amaranth Greens,1.7,Vegetables,0000-00-00,0000-00-00,
+751,Roselle Leaves,1.6,Vegetables,0000-00-00,0000-00-00,
+752,Molokhia,1.8,Vegetables,0000-00-00,0000-00-00,
+753,Fenugreek Leaves,1.2,Vegetables,0000-00-00,0000-00-00,
+754,Water Spinach,1.5,Vegetables,0000-00-00,0000-00-00,
+755,Mustard Spinach,1.7,Vegetables,0000-00-00,0000-00-00,
+756,New Zealand Spinach,1.6,Vegetables,0000-00-00,0000-00-00,
+757,Corn Salad,1.4,Vegetables,0000-00-00,0000-00-00,
+758,Claytonia,1.3,Vegetables,0000-00-00,0000-00-00,
+759,Chicory,1.5,Vegetables,0000-00-00,0000-00-00,
+760,Radicchio,1.8,Vegetables,0000-00-00,0000-00-00,
+761,Escarole,1.7,Vegetables,0000-00-00,0000-00-00,
+762,Frisée,1.8,Vegetables,0000-00-00,0000-00-00,
+763,Belgian Endive,2.1,Vegetables,0000-00-00,0000-00-00,
+764,Celeriac Root,2.3,Vegetables,0000-00-00,0000-00-00,
+765,Parsley Root,1.2,Vegetables,0000-00-00,0000-00-00,
+766,Sunchoke,2.6,Vegetables,0000-00-00,0000-00-00,
+767,Celery Hearts,1.5,Vegetables,0000-00-00,0000-00-00,
+768,Baby Spinach,1.7,Vegetables,0000-00-00,0000-00-00,
+769,Baby Kale,1.9,Vegetables,0000-00-00,0000-00-00,
+770,Baby Swiss Chard,1.8,Vegetables,0000-00-00,0000-00-00,
+771,Mini Peppers,2.2,Vegetables,0000-00-00,0000-00-00,
+772,Shishito Peppers,2.3,Vegetables,0000-00-00,0000-00-00,
+773,Padron Peppers,2.2,Vegetables,0000-00-00,0000-00-00,
+774,Pepperoncini,2.1,Vegetables,0000-00-00,0000-00-00,
+775,Anaheim Peppers,2.2,Vegetables,0000-00-00,0000-00-00,
+776,Poblano Peppers,2.3,Vegetables,0000-00-00,0000-00-00,
+777,Cubanelle Peppers,2.1,Vegetables,0000-00-00,0000-00-00,
+778,Hungarian Wax Peppers,2,Vegetables,0000-00-00,0000-00-00,
+779,Banana Peppers,2,Vegetables,0000-00-00,0000-00-00,
+780,Habanero Peppers,2.5,Vegetables,0000-00-00,0000-00-00,
+781,Ghost Peppers,3.1,Vegetables,0000-00-00,0000-00-00,
+782,Carolina Reaper,3.5,Vegetables,0000-00-00,0000-00-00,
+783,Scotch Bonnet,3.2,Vegetables,0000-00-00,0000-00-00,
+784,Pink Peppercorns,2.9,Condiments,0000-00-00,0000-00-00,ml
+785,Green Peppercorns,2.6,Condiments,0000-00-00,0000-00-00,ml
+786,White Peppercorns,2.7,Condiments,0000-00-00,0000-00-00,ml
+787,Szechuan Peppercorns,2.8,Condiments,0000-00-00,0000-00-00,ml
+788,Grains of Paradise,3.1,Condiments,0000-00-00,0000-00-00,ml
+789,Allspice,2.2,Condiments,0000-00-00,0000-00-00,ml
+790,Juniper Berries,2.5,Condiments,0000-00-00,0000-00-00,ml
+791,Star Anise,2.4,Condiments,0000-00-00,0000-00-00,ml
+792,Mace,2.3,Condiments,0000-00-00,0000-00-00,ml
+793,Sumac,2.5,Condiments,0000-00-00,0000-00-00,ml
+794,Za’atar,2.7,Condiments,0000-00-00,0000-00-00,ml
+795,Ras el Hanout,2.9,Condiments,0000-00-00,0000-00-00,ml
+796,Berbere,2.8,Condiments,0000-00-00,0000-00-00,ml
+797,Dukkah,2.6,Condiments,0000-00-00,0000-00-00,ml
+798,Baharat,2.7,Condiments,0000-00-00,0000-00-00,ml
+799,Advieh,2.8,Condiments,0000-00-00,0000-00-00,ml
+800,Celeriac Mash,2.6,Vegetables,0000-00-00,0000-00-00,
+801,Red Rice,2.2,Grains,0000-00-00,0000-00-00,
+802,Japanese Yam,1.9,Vegetables,0000-00-00,0000-00-00,
+803,Lotus Seeds,2.8,Snacks,0000-00-00,0000-00-00,
+804,Macadamia Nuts,3.9,Snacks,0000-00-00,0000-00-00,
+805,Brazil Nuts,3.5,Snacks,0000-00-00,0000-00-00,
+806,Pecan Nuts,3.2,Snacks,0000-00-00,0000-00-00,
+807,Walnuts,2.9,Snacks,0000-00-00,0000-00-00,
+808,Pine Nuts,4.2,Snacks,0000-00-00,0000-00-00,
+809,Chestnuts,2.7,Snacks,0000-00-00,0000-00-00,
+810,Dandelion Greens,1.6,Vegetables,0000-00-00,0000-00-00,
+811,Fiddleheads,2.5,Vegetables,0000-00-00,0000-00-00,
+812,Salsify Root,2.3,Vegetables,0000-00-00,0000-00-00,
+813,Black Salsify,2.7,Vegetables,0000-00-00,0000-00-00,
+814,Chayote Squash,1.8,Vegetables,0000-00-00,0000-00-00,
+815,Chinese Cabbage,1.5,Vegetables,0000-00-00,0000-00-00,
+816,Romanesco Cauliflower,2.8,Vegetables,0000-00-00,0000-00-00,
+817,Purple Sweet Potato,2.2,Vegetables,0000-00-00,0000-00-00,
+818,White Asparagus,2.9,Vegetables,0000-00-00,0000-00-00,
+819,Rutabaga,1.4,Vegetables,0000-00-00,0000-00-00,
+820,Garden Peas,1.3,Vegetables,0000-00-00,0000-00-00,
+821,Baby Corn,1.7,Vegetables,0000-00-00,0000-00-00,
+822,Sugar Peas,1.7,Vegetables,0000-00-00,0000-00-00,
+823,Kohlrabi Leaves,1.2,Vegetables,0000-00-00,0000-00-00,
+824,Daikon Shoots,1.9,Vegetables,0000-00-00,0000-00-00,
+825,Water Spinach,1.8,Vegetables,0000-00-00,0000-00-00,
+826,Gai Lan,1.9,Vegetables,0000-00-00,0000-00-00,
+827,Broccoli Sprouts,2.1,Vegetables,0000-00-00,0000-00-00,
+828,Turnip Greens,1.5,Vegetables,0000-00-00,0000-00-00,
+829,Radish Sprouts,1.8,Vegetables,0000-00-00,0000-00-00,
+830,Mustard Cress,1.4,Vegetables,0000-00-00,0000-00-00,
+831,Mung Bean Sprouts,1.3,Vegetables,0000-00-00,0000-00-00,
+832,Alfalfa Sprouts,1.2,Vegetables,0000-00-00,0000-00-00,
+833,Wheatgrass,2.1,Vegetables,0000-00-00,0000-00-00,
+834,Pumpkin Blossoms,2.6,Vegetables,0000-00-00,0000-00-00,
+835,Squash Blossoms,2.8,Vegetables,0000-00-00,0000-00-00,
+836,White Eggplant,1.9,Vegetables,0000-00-00,0000-00-00,
+837,Long Eggplant,1.7,Vegetables,0000-00-00,0000-00-00,
+838,Thai Eggplant,1.8,Vegetables,0000-00-00,0000-00-00,
+839,Yellow Zucchini,1.6,Vegetables,0000-00-00,0000-00-00,
+840,Pattypan Squash,1.9,Vegetables,0000-00-00,0000-00-00,
+841,Chayote Leaves,1.3,Vegetables,0000-00-00,0000-00-00,
+842,Jicama Root,1.5,Vegetables,0000-00-00,0000-00-00,
+843,Taro Root,2.3,Vegetables,0000-00-00,0000-00-00,
+844,Cassava Root,2.1,Vegetables,0000-00-00,0000-00-00,
+845,Yuca,2.4,Vegetables,0000-00-00,0000-00-00,
+846,Malanga,2.2,Vegetables,0000-00-00,0000-00-00,
+847,Oca,2.3,Vegetables,0000-00-00,0000-00-00,
+848,Mashua,2.5,Vegetables,0000-00-00,0000-00-00,
+849,Sunchoke,2.7,Vegetables,0000-00-00,0000-00-00,
+850,Parsley Root,1.7,Vegetables,0000-00-00,0000-00-00,
+851,Celery Root,1.8,Vegetables,0000-00-00,0000-00-00,
+852,Burdock Root,2.2,Vegetables,0000-00-00,0000-00-00,
+853,Arrowroot,2.6,Vegetables,0000-00-00,0000-00-00,
+854,Lotus Root,2.9,Vegetables,0000-00-00,0000-00-00,
+855,Seaweed Salad,2.5,Vegetables,0000-00-00,0000-00-00,
+856,Hijiki,2.8,Vegetables,0000-00-00,0000-00-00,
+857,Arame,2.7,Vegetables,0000-00-00,0000-00-00,
+858,Wakame,2.5,Vegetables,0000-00-00,0000-00-00,
+859,Dulse,2.9,Vegetables,0000-00-00,0000-00-00,
+860,Nori Sheets,2.6,Vegetables,0000-00-00,0000-00-00,
+861,Laver,2.5,Vegetables,0000-00-00,0000-00-00,
+862,Irish Moss,2.7,Vegetables,0000-00-00,0000-00-00,
+863,Kelps,2.3,Vegetables,0000-00-00,0000-00-00,
+864,Ramsons,2.1,Vegetables,0000-00-00,0000-00-00,
+865,Sorrel Leaves,1.9,Vegetables,0000-00-00,0000-00-00,
+866,Lovage Leaves,2.2,Vegetables,0000-00-00,0000-00-00,
+867,Marjoram Leaves,2.1,Vegetables,0000-00-00,0000-00-00,
+868,Herbs de Provence,2.6,Condiments,0000-00-00,0000-00-00,ml
+869,Za’atar Mix,2.7,Condiments,0000-00-00,0000-00-00,ml
+870,Sumac Spice,2.5,Condiments,0000-00-00,0000-00-00,ml
+871,Dukkah Spice Mix,2.8,Condiments,0000-00-00,0000-00-00,ml
+872,Berbere Spice Mix,2.8,Condiments,0000-00-00,0000-00-00,ml
+873,Ras el Hanout,2.9,Condiments,0000-00-00,0000-00-00,ml
+874,Advieh,2.7,Condiments,0000-00-00,0000-00-00,ml
+875,Cajun Seasoning,2.6,Condiments,0000-00-00,0000-00-00,ml
+876,Creole Seasoning,2.7,Condiments,0000-00-00,0000-00-00,ml
+877,Chinese Five Spice,2.5,Condiments,0000-00-00,0000-00-00,ml
+878,Curry Powder,2.3,Condiments,0000-00-00,0000-00-00,ml
+879,Garam Masala,2.6,Condiments,0000-00-00,0000-00-00,ml
+880,Tandoori Masala,2.7,Condiments,0000-00-00,0000-00-00,ml
+881,Chaat Masala,2.5,Condiments,0000-00-00,0000-00-00,ml
+882,Panch Phoron,2.4,Condiments,0000-00-00,0000-00-00,ml
+883,Herbes de Provence,2.6,Condiments,0000-00-00,0000-00-00,ml
+884,Italian Seasoning,2.4,Condiments,0000-00-00,0000-00-00,ml
+885,Greek Seasoning,2.5,Condiments,0000-00-00,0000-00-00,ml
+886,French Four Spice,2.8,Condiments,0000-00-00,0000-00-00,ml
+887,Pickling Spice,2.3,Condiments,0000-00-00,0000-00-00,ml
+888,Fennel Seeds,2.2,Condiments,0000-00-00,0000-00-00,ml
+889,Caraway Seeds,2.1,Condiments,0000-00-00,0000-00-00,ml
+890,Nigella Seeds,2.3,Condiments,0000-00-00,0000-00-00,ml
+891,Ajwain Seeds,2.1,Condiments,0000-00-00,0000-00-00,ml
+892,Fenugreek Seeds,2.2,Condiments,0000-00-00,0000-00-00,ml
+893,Mustard Seeds,2.1,Condiments,0000-00-00,0000-00-00,ml
+894,Celery Seeds,2.1,Condiments,0000-00-00,0000-00-00,ml
+895,Poppy Seeds,2.4,Condiments,0000-00-00,0000-00-00,ml
+896,Cardamom Pods,2.6,Condiments,0000-00-00,0000-00-00,ml
+897,Cloves,2.5,Condiments,0000-00-00,0000-00-00,ml
+898,Mace Spice,2.8,Condiments,0000-00-00,0000-00-00,ml
+899,Nutmeg,2.7,Condiments,0000-00-00,0000-00-00,ml
+900,Allspice,2.5,Condiments,0000-00-00,0000-00-00,ml
+901,Coriander Seeds,2.2,Condiments,0000-00-00,0000-00-00,ml
+902,Star Anise,2.4,Condiments,0000-00-00,0000-00-00,ml
+903,Szechuan Peppercorns,2.7,Condiments,0000-00-00,0000-00-00,ml
+904,White Peppercorns,2.6,Condiments,0000-00-00,0000-00-00,ml
+905,Pink Peppercorns,2.9,Condiments,0000-00-00,0000-00-00,ml
+906,Green Peppercorns,2.6,Condiments,0000-00-00,0000-00-00,ml
+907,Bay Leaves,2.1,Condiments,0000-00-00,0000-00-00,ml
+908,Curry Leaves,2.5,Condiments,0000-00-00,0000-00-00,ml
+909,Kaffir Lime Leaves,2.8,Condiments,0000-00-00,0000-00-00,ml
+910,Lemongrass,2.3,Condiments,0000-00-00,0000-00-00,ml
+911,Galangal,2.5,Condiments,0000-00-00,0000-00-00,ml
+912,Tamarind Paste,2.2,Condiments,0000-00-00,0000-00-00,ml
+913,Date Syrup,2.7,Condiments,0000-00-00,0000-00-00,ml
+914,Pomegranate Molasses,2.8,Condiments,0000-00-00,0000-00-00,ml
+915,Apple Butter,2.6,Condiments,0000-00-00,0000-00-00,ml
+916,Fig Jam,2.5,Condiments,0000-00-00,0000-00-00,ml
+917,Quince Paste,2.7,Condiments,0000-00-00,0000-00-00,ml
+918,Rosehip Jam,2.8,Condiments,0000-00-00,0000-00-00,ml
+919,Gooseberry Jam,2.7,Condiments,0000-00-00,0000-00-00,ml
+920,Pear Butter,2.4,Condiments,0000-00-00,0000-00-00,ml
+921,Plum Butter,2.5,Condiments,0000-00-00,0000-00-00,ml
+922,Pumpkin Butter,2.6,Condiments,0000-00-00,0000-00-00,ml
+923,Cherry Preserve,2.8,Condiments,0000-00-00,0000-00-00,ml
+924,Apricot Preserve,2.7,Condiments,0000-00-00,0000-00-00,ml
+925,Orange Marmalade,2.8,Condiments,0000-00-00,0000-00-00,ml
+926,Lemon Marmalade,2.9,Condiments,0000-00-00,0000-00-00,ml
+927,Lime Marmalade,2.7,Condiments,0000-00-00,0000-00-00,ml
+928,Ginger Marmalade,2.8,Condiments,0000-00-00,0000-00-00,ml
+929,Grape Jelly,2.5,Condiments,0000-00-00,0000-00-00,ml
+930,Apple Jelly,2.6,Condiments,0000-00-00,0000-00-00,ml
+931,Blackcurrant Jelly,2.8,Condiments,0000-00-00,0000-00-00,ml
+932,Redcurrant Jelly,2.7,Condiments,0000-00-00,0000-00-00,ml
+933,Elderberry Jelly,2.9,Condiments,0000-00-00,0000-00-00,ml
+934,Mint Jelly,2.5,Condiments,0000-00-00,0000-00-00,ml
+935,Sage Jelly,2.7,Condiments,0000-00-00,0000-00-00,ml
+936,Raspberry Jelly,2.8,Condiments,0000-00-00,0000-00-00,ml
+937,Strawberry Jam,2.5,Condiments,0000-00-00,0000-00-00,ml
+938,Blueberry Jam,2.7,Condiments,0000-00-00,0000-00-00,ml
+939,Blackberry Jam,2.8,Condiments,0000-00-00,0000-00-00,ml
+940,Mulberry Jam,2.7,Condiments,0000-00-00,0000-00-00,ml
+941,Papaya Jam,2.6,Condiments,0000-00-00,0000-00-00,ml
+942,Pineapple Jam,2.8,Condiments,0000-00-00,0000-00-00,ml
+943,Mango Jam,2.9,Condiments,0000-00-00,0000-00-00,ml
+944,Guava Paste,2.8,Condiments,0000-00-00,0000-00-00,ml
+945,Lychee Jam,2.9,Condiments,0000-00-00,0000-00-00,ml
+946,Passion Fruit Jam,2.9,Condiments,0000-00-00,0000-00-00,ml
+947,Banana Jam,2.7,Condiments,0000-00-00,0000-00-00,ml
+948,Starfruit Jam,2.8,Condiments,0000-00-00,0000-00-00,ml
+949,Dragon Fruit Jam,2.9,Condiments,0000-00-00,0000-00-00,ml
+950,Jackfruit Jam,2.7,Condiments,0000-00-00,0000-00-00,ml
+951,Breadfruit Jam,2.8,Condiments,0000-00-00,0000-00-00,ml
+952,Persimmon Jam,2.9,Condiments,0000-00-00,0000-00-00,ml
+953,Medlar Jam,2.8,Condiments,0000-00-00,0000-00-00,ml
+954,Loquat Jam,2.7,Condiments,0000-00-00,0000-00-00,ml
+955,Feijoa Jam,2.8,Condiments,0000-00-00,0000-00-00,ml
+956,Pawpaw Jam,2.7,Condiments,0000-00-00,0000-00-00,ml
+957,Cloudberry Jam,3.4,Condiments,0000-00-00,0000-00-00,ml
+958,Lingonberry Jam,3.2,Condiments,0000-00-00,0000-00-00,ml
+959,Salmonberry Jam,3.1,Condiments,0000-00-00,0000-00-00,ml
+960,Huckleberry Jam,3.3,Condiments,0000-00-00,0000-00-00,ml
+961,Boysenberry Jam,3.2,Condiments,0000-00-00,0000-00-00,ml
+962,Marionberry Jam,3.1,Condiments,0000-00-00,0000-00-00,ml
+963,Serviceberry Jam,2.9,Condiments,0000-00-00,0000-00-00,ml
+964,Cranberry Relish,2.7,Condiments,0000-00-00,0000-00-00,ml
+965,Pumpkin Relish,2.8,Condiments,0000-00-00,0000-00-00,ml
+966,Zucchini Relish,2.6,Condiments,0000-00-00,0000-00-00,ml
+967,Corn Relish,2.5,Condiments,0000-00-00,0000-00-00,ml
+968,Tomato Relish,2.7,Condiments,0000-00-00,0000-00-00,ml
+969,Coconut Sugar,2.6,Condiments,0000-00-00,0000-00-00,ml
+970,Date Sugar,2.8,Condiments,0000-00-00,0000-00-00,ml
+971,Palm Sugar,2.5,Condiments,0000-00-00,0000-00-00,ml
+972,Agave Syrup,2.7,Condiments,0000-00-00,0000-00-00,ml
+973,Malt Syrup,2.4,Condiments,0000-00-00,0000-00-00,ml
+974,Barley Malt,2.3,Condiments,0000-00-00,0000-00-00,ml
+975,Brown Rice Syrup,2.5,Condiments,0000-00-00,0000-00-00,ml
+976,Molasses,2.3,Condiments,0000-00-00,0000-00-00,ml
+977,Blackstrap Molasses,2.5,Condiments,0000-00-00,0000-00-00,ml
+978,Carob Syrup,2.7,Condiments,0000-00-00,0000-00-00,ml
+979,Sorghum Syrup,2.4,Condiments,0000-00-00,0000-00-00,ml
+980,Rice Syrup,2.3,Condiments,0000-00-00,0000-00-00,ml
+981,Maple Flakes,2.8,Condiments,0000-00-00,0000-00-00,ml
+982,Stevia Leaves,2.7,Condiments,0000-00-00,0000-00-00,ml
+983,Monk Fruit Sweetener,2.9,Condiments,0000-00-00,0000-00-00,ml
+984,Erythritol,2.8,Condiments,0000-00-00,0000-00-00,ml
+985,Xylitol,2.7,Condiments,0000-00-00,0000-00-00,ml
+986,Birch Sugar,2.5,Condiments,0000-00-00,0000-00-00,ml
+987,Organic Cane Sugar,2.6,Condiments,0000-00-00,0000-00-00,ml
+988,Golden Syrup,2.5,Condiments,0000-00-00,0000-00-00,ml
+989,Pomegranate Seeds,2.7,Snacks,0000-00-00,0000-00-00,
+990,Roasted Lotus Seeds,2.9,Snacks,0000-00-00,0000-00-00,
+991,Roasted Chickpea Snacks,2.5,Snacks,0000-00-00,0000-00-00,
+992,Roasted Edamame Snacks,2.7,Snacks,0000-00-00,0000-00-00,
+993,Roasted Broad Beans,2.6,Snacks,0000-00-00,0000-00-00,
+994,Roasted Green Peas,2.5,Snacks,0000-00-00,0000-00-00,
+995,Roasted Soy Nuts,2.6,Snacks,0000-00-00,0000-00-00,
+996,Roasted Corn Snacks,2.5,Snacks,0000-00-00,0000-00-00,
+997,Salted Pumpkin Seeds,2.7,Snacks,0000-00-00,0000-00-00,
+998,Salted Sunflower Seeds,2.5,Snacks,0000-00-00,0000-00-00,
+999,Salted Watermelon Seeds,2.6,Snacks,0000-00-00,0000-00-00,
+1000,Roasted Lentil Snacks,2.5,Snacks,0000-00-00,0000-00-00,
+1001,Dried Mulberries,2.9,Snacks,0000-00-00,0000-00-00,
+1002,Dried Inca Berries,3.1,Snacks,0000-00-00,0000-00-00,
+1003,Dried Golden Berries,3.2,Snacks,0000-00-00,0000-00-00,
+1004,Dried Physalis,3.3,Snacks,0000-00-00,0000-00-00,
+1005,Dried White Figs,2.8,Snacks,0000-00-00,0000-00-00,
+1006,Dried Turkish Figs,2.7,Snacks,0000-00-00,0000-00-00,
+1007,Dried Smyrna Figs,2.8,Snacks,0000-00-00,0000-00-00,
+1008,Dried Calimyrna Figs,2.9,Snacks,0000-00-00,0000-00-00,
+1009,Dried Mission Figs,2.8,Snacks,0000-00-00,0000-00-00,
+1010,Dried Turkish Apricots,2.7,Snacks,0000-00-00,0000-00-00,
+1011,Dried Black Apricots,2.8,Snacks,0000-00-00,0000-00-00,
+1012,Dried Persian Apricots,2.9,Snacks,0000-00-00,0000-00-00,
+1013,Dried White Peaches,2.8,Snacks,0000-00-00,0000-00-00,
+1014,Dried Yellow Peaches,2.7,Snacks,0000-00-00,0000-00-00,
+1015,Dried White Nectarines,2.9,Snacks,0000-00-00,0000-00-00,
+1016,Dried Yellow Nectarines,2.8,Snacks,0000-00-00,0000-00-00,
+1017,Dried Mangosteen,3.5,Snacks,0000-00-00,0000-00-00,
+1018,Dried Rambutan,3.3,Snacks,0000-00-00,0000-00-00,
+1019,Dried Salak,3.1,Snacks,0000-00-00,0000-00-00,
+1020,Dried Longan,2.9,Snacks,0000-00-00,0000-00-00,
+1021,Dried Lychee,2.9,Snacks,0000-00-00,0000-00-00,
+1022,Dried Soursop,3.7,Snacks,0000-00-00,0000-00-00,
+1023,Dried Sapote,3.2,Snacks,0000-00-00,0000-00-00,
+1024,Dried Star Apple,3.4,Snacks,0000-00-00,0000-00-00,
+1025,Dried Rose Apple,3.2,Snacks,0000-00-00,0000-00-00,
+1026,Dried Black Sapote,3.5,Snacks,0000-00-00,0000-00-00,
+1027,Dried White Sapote,3.6,Snacks,0000-00-00,0000-00-00,
+1028,Dried Cherimoya,3.7,Snacks,0000-00-00,0000-00-00,
+1029,Dried Atemoya,3.5,Snacks,0000-00-00,0000-00-00,
+1030,Dried Pawpaw,3.8,Snacks,0000-00-00,0000-00-00,
+1031,Dried Loquat,3.2,Snacks,0000-00-00,0000-00-00,
+1032,Dried Medlar,3.1,Snacks,0000-00-00,0000-00-00,
+1033,Dried Quince,3,Snacks,0000-00-00,0000-00-00,
+1034,Dried Feijoa,3.2,Snacks,0000-00-00,0000-00-00,
+1035,Dried Ackee,3.3,Snacks,0000-00-00,0000-00-00,
+1036,Dried Breadfruit,3.4,Snacks,0000-00-00,0000-00-00,
+1037,Dried Langsat,3.2,Snacks,0000-00-00,0000-00-00,
+1038,Dried Santol,3.1,Snacks,0000-00-00,0000-00-00,
+1039,Dried Pulasan,3.4,Snacks,0000-00-00,0000-00-00,
+1040,Dried Ambarella,3.3,Snacks,0000-00-00,0000-00-00,
+1041,Dried Wood Apple,3.4,Snacks,0000-00-00,0000-00-00,
+1042,Dried Bacaba,3.3,Snacks,0000-00-00,0000-00-00,
+1043,Dried Camu Camu,3.7,Snacks,0000-00-00,0000-00-00,
+1044,Dried Pepino Melon,3.1,Snacks,0000-00-00,0000-00-00,
+1045,Dried Tayberry,3.2,Snacks,0000-00-00,0000-00-00,
+1046,Dried Naranjilla,3.5,Snacks,0000-00-00,0000-00-00,
+1047,Dried Babaco,3.3,Snacks,0000-00-00,0000-00-00,
+1048,Dried Calamansi,3.2,Snacks,0000-00-00,0000-00-00,
+1049,Dried Satsuma,3.1,Snacks,0000-00-00,0000-00-00,
+1050,Dried Dekopon,3.2,Snacks,0000-00-00,0000-00-00,
+1051,Dried Yuzu,3.5,Snacks,0000-00-00,0000-00-00,
+1052,Dried Kumquat,3.2,Snacks,0000-00-00,0000-00-00,
+1053,Dried Ugni,3.3,Snacks,0000-00-00,0000-00-00,
+1054,Dried Pluot,3.2,Snacks,0000-00-00,0000-00-00,
+1055,Dried Aprium,3.1,Snacks,0000-00-00,0000-00-00,
+1056,Dried Pineberry,3.5,Snacks,0000-00-00,0000-00-00,
+1057,Dried Plumcot,3.1,Snacks,0000-00-00,0000-00-00,
+1058,Dried Greengage,3.2,Snacks,0000-00-00,0000-00-00,
+1059,Dried Mirabelle,3.1,Snacks,0000-00-00,0000-00-00,
+1060,Dried Damson,3.2,Snacks,0000-00-00,0000-00-00,
+1061,Dried Sloe,3.1,Snacks,0000-00-00,0000-00-00,
+1062,Dried Mangaba,3.2,Snacks,0000-00-00,0000-00-00,
+1063,Dried Mundu,3.1,Snacks,0000-00-00,0000-00-00,
+1064,Dried Mabolo,3.3,Snacks,0000-00-00,0000-00-00,
+1065,Dried Sapodilla,3.4,Snacks,0000-00-00,0000-00-00,
+1066,Dried Caimito,3.2,Snacks,0000-00-00,0000-00-00,
+1067,Dried Abiu,3.1,Snacks,0000-00-00,0000-00-00,
+1068,Dried Lucuma,3.2,Snacks,0000-00-00,0000-00-00,
+1069,Dried Camas,3.3,Snacks,0000-00-00,0000-00-00,
+1070,Dried Buffaloberry,3.4,Snacks,0000-00-00,0000-00-00,
+1071,Dried Barberry,3.3,Snacks,0000-00-00,0000-00-00,
+1072,Dried Sea Buckthorn,3.2,Snacks,0000-00-00,0000-00-00,
+1073,Dried Rowanberry,3.1,Snacks,0000-00-00,0000-00-00,
+1074,Dried Shepherdia,3.3,Snacks,0000-00-00,0000-00-00,
+1075,Dried Mayapple,3.2,Snacks,0000-00-00,0000-00-00,
+1076,Dried Aronia Berry,3.1,Snacks,0000-00-00,0000-00-00,
+1077,Dried Chokeberry,3.2,Snacks,0000-00-00,0000-00-00,
+1078,Dried Chokecherry,3.3,Snacks,0000-00-00,0000-00-00,
+1079,Dried Capulin Cherry,3.4,Snacks,0000-00-00,0000-00-00,
+1080,Dried Ground Cherry,3.3,Snacks,0000-00-00,0000-00-00,
+1081,Dried Hackberry,3.2,Snacks,0000-00-00,0000-00-00,
+1082,Dried Huito,3.1,Snacks,0000-00-00,0000-00-00,
+1083,Dried Jabuticaba,3.4,Snacks,0000-00-00,0000-00-00,
+1084,Dried Jostaberry,3.3,Snacks,0000-00-00,0000-00-00,
+1085,Dried Mamey Sapote,3.2,Snacks,0000-00-00,0000-00-00,
+1086,Dried Mammee Apple,3.1,Snacks,0000-00-00,0000-00-00,
+1087,Dried Marula,3.2,Snacks,0000-00-00,0000-00-00,
+1088,Dried Miracle Fruit,3.3,Snacks,0000-00-00,0000-00-00,
+1089,Dried Muscadine,3.2,Snacks,0000-00-00,0000-00-00,
+1090,Dried Nance,3.1,Snacks,0000-00-00,0000-00-00,
+1091,Dried Oil Palm Fruit,3.2,Snacks,0000-00-00,0000-00-00,
+1092,Dried Osage Orange,3.1,Snacks,0000-00-00,0000-00-00,
+1093,Dried Persimmon,3.2,Snacks,0000-00-00,0000-00-00,
+1094,Dried Peumo,3.1,Snacks,0000-00-00,0000-00-00,
+1095,Dried Pindo Palm Fruit,3.2,Snacks,0000-00-00,0000-00-00,
+1096,Dried Pitanga,3.1,Snacks,0000-00-00,0000-00-00,
+1097,Dried Pouteria,3.2,Snacks,0000-00-00,0000-00-00,
+1098,Dried Sapote,3.3,Snacks,0000-00-00,0000-00-00,
+1099,Dried Surinam Cherry,3.2,Snacks,0000-00-00,0000-00-00,
+1100,Dried Tamarillo,3.1,Snacks,0000-00-00,0000-00-00,
+1101,Dried Tejocote,3.2,Snacks,0000-00-00,0000-00-00,
+1102,Dried Umbu,3.1,Snacks,0000-00-00,0000-00-00,
+1103,Dried Voavanga,3.2,Snacks,0000-00-00,0000-00-00,
+1104,Dried Wampi,3.1,Snacks,0000-00-00,0000-00-00,
+1105,Dried Yangmei,3.2,Snacks,0000-00-00,0000-00-00,
+1106,Dried Ziziphus,3.1,Snacks,0000-00-00,0000-00-00,
+1107,Coconut Sugar,2.6,Condiments,0000-00-00,0000-00-00,ml
+1108,Date Sugar,2.8,Condiments,0000-00-00,0000-00-00,ml
+1109,Palm Sugar,2.5,Condiments,0000-00-00,0000-00-00,ml
+1110,Agave Syrup,2.7,Condiments,0000-00-00,0000-00-00,ml
+1111,Malt Syrup,2.4,Condiments,0000-00-00,0000-00-00,ml
+1112,Barley Malt,2.3,Condiments,0000-00-00,0000-00-00,ml
+1113,Brown Rice Syrup,2.5,Condiments,0000-00-00,0000-00-00,ml
+1114,Molasses,2.3,Condiments,0000-00-00,0000-00-00,ml
+1115,Blackstrap Molasses,2.5,Condiments,0000-00-00,0000-00-00,ml
+1116,Carob Syrup,2.7,Condiments,0000-00-00,0000-00-00,ml
+1117,Sorghum Syrup,2.4,Condiments,0000-00-00,0000-00-00,ml
+1118,Rice Syrup,2.3,Condiments,0000-00-00,0000-00-00,ml
+1119,Maple Flakes,2.8,Condiments,0000-00-00,0000-00-00,ml
+1120,Stevia Leaves,2.7,Condiments,0000-00-00,0000-00-00,ml
+1121,Monk Fruit Sweetener,2.9,Condiments,0000-00-00,0000-00-00,ml
+1122,Erythritol,2.8,Condiments,0000-00-00,0000-00-00,ml
+1123,Xylitol,2.7,Condiments,0000-00-00,0000-00-00,ml
+1124,Birch Sugar,2.5,Condiments,0000-00-00,0000-00-00,ml
+1125,Organic Cane Sugar,2.6,Condiments,0000-00-00,0000-00-00,ml
+1126,Golden Syrup,2.5,Condiments,0000-00-00,0000-00-00,ml
+1127,Pomegranate Seeds,2.7,Snacks,0000-00-00,0000-00-00,
+1128,Roasted Lotus Seeds,2.9,Snacks,0000-00-00,0000-00-00,
+1129,Roasted Chickpea Snacks,2.5,Snacks,0000-00-00,0000-00-00,
+1130,Roasted Edamame Snacks,2.7,Snacks,0000-00-00,0000-00-00,
+1131,Roasted Broad Beans,2.6,Snacks,0000-00-00,0000-00-00,
+1132,Roasted Green Peas,2.5,Snacks,0000-00-00,0000-00-00,
+1133,Roasted Soy Nuts,2.6,Snacks,0000-00-00,0000-00-00,
+1134,Roasted Corn Snacks,2.5,Snacks,0000-00-00,0000-00-00,
+1135,Salted Pumpkin Seeds,2.7,Snacks,0000-00-00,0000-00-00,
+1136,Salted Sunflower Seeds,2.5,Snacks,0000-00-00,0000-00-00,
+1137,Salted Watermelon Seeds,2.6,Snacks,0000-00-00,0000-00-00,
+1138,Roasted Lentil Snacks,2.5,Snacks,0000-00-00,0000-00-00,
+1139,Dried Mulberries,2.9,Snacks,0000-00-00,0000-00-00,
+1140,Dried Inca Berries,3.1,Snacks,0000-00-00,0000-00-00,
+1141,Dried Golden Berries,3.2,Snacks,0000-00-00,0000-00-00,
+1142,Dried Physalis,3.3,Snacks,0000-00-00,0000-00-00,
+1143,Dried White Figs,2.8,Snacks,0000-00-00,0000-00-00,
+1144,Dried Turkish Figs,2.7,Snacks,0000-00-00,0000-00-00,
+1145,Dried Smyrna Figs,2.8,Snacks,0000-00-00,0000-00-00,
+1146,Dried Calimyrna Figs,2.9,Snacks,0000-00-00,0000-00-00,
+1147,Dried Mission Figs,2.8,Snacks,0000-00-00,0000-00-00,
+1148,Dried Turkish Apricots,2.7,Snacks,0000-00-00,0000-00-00,
+1149,Dried Black Apricots,2.8,Snacks,0000-00-00,0000-00-00,
+1150,Dried Persian Apricots,2.9,Snacks,0000-00-00,0000-00-00,
+1151,Dried White Peaches,2.8,Snacks,0000-00-00,0000-00-00,
+1152,Dried Yellow Peaches,2.7,Snacks,0000-00-00,0000-00-00,
+1153,Dried White Nectarines,2.9,Snacks,0000-00-00,0000-00-00,
+1154,Dried Yellow Nectarines,2.8,Snacks,0000-00-00,0000-00-00,
+1155,Dried Mangosteen,3.5,Snacks,0000-00-00,0000-00-00,
+1156,Dried Rambutan,3.3,Snacks,0000-00-00,0000-00-00,
+1157,Dried Salak,3.1,Snacks,0000-00-00,0000-00-00,
+1158,Dried Longan,2.9,Snacks,0000-00-00,0000-00-00,
+1159,Dried Lychee,2.9,Snacks,0000-00-00,0000-00-00,
+1160,Dried Soursop,3.7,Snacks,0000-00-00,0000-00-00,
+1161,Dried Sapote,3.2,Snacks,0000-00-00,0000-00-00,
+1162,Dried Star Apple,3.4,Snacks,0000-00-00,0000-00-00,
+1163,Dried Rose Apple,3.2,Snacks,0000-00-00,0000-00-00,
+1164,Dried Black Sapote,3.5,Snacks,0000-00-00,0000-00-00,
+1165,Dried White Sapote,3.6,Snacks,0000-00-00,0000-00-00,
+1166,Dried Cherimoya,3.7,Snacks,0000-00-00,0000-00-00,
+1167,Dried Atemoya,3.5,Snacks,0000-00-00,0000-00-00,
+1168,Dried Pawpaw,3.8,Snacks,0000-00-00,0000-00-00,
+1169,Dried Loquat,3.2,Snacks,0000-00-00,0000-00-00,
+1170,Dried Medlar,3.1,Snacks,0000-00-00,0000-00-00,
+1171,Dried Quince,3,Snacks,0000-00-00,0000-00-00,
+1172,Dried Feijoa,3.2,Snacks,0000-00-00,0000-00-00,
+1173,Dried Ackee,3.3,Snacks,0000-00-00,0000-00-00,
+1174,Dried Breadfruit,3.4,Snacks,0000-00-00,0000-00-00,
+1175,Dried Langsat,3.2,Snacks,0000-00-00,0000-00-00,
+1176,Dried Santol,3.1,Snacks,0000-00-00,0000-00-00,
+1177,Dried Pulasan,3.4,Snacks,0000-00-00,0000-00-00,
+1178,Dried Ambarella,3.3,Snacks,0000-00-00,0000-00-00,
+1179,Dried Wood Apple,3.4,Snacks,0000-00-00,0000-00-00,
+1180,Dried Bacaba,3.3,Snacks,0000-00-00,0000-00-00,
+1181,Dried Camu Camu,3.7,Snacks,0000-00-00,0000-00-00,
+1182,Dried Pepino Melon,3.1,Snacks,0000-00-00,0000-00-00,
+1183,Dried Tayberry,3.2,Snacks,0000-00-00,0000-00-00,
+1184,Dried Naranjilla,3.5,Snacks,0000-00-00,0000-00-00,
+1185,Dried Babaco,3.3,Snacks,0000-00-00,0000-00-00,
+1186,Dried Calamansi,3.2,Snacks,0000-00-00,0000-00-00,
+1187,Dried Satsuma,3.1,Snacks,0000-00-00,0000-00-00,
+1188,Dried Dekopon,3.2,Snacks,0000-00-00,0000-00-00,
+1189,Dried Yuzu,3.5,Snacks,0000-00-00,0000-00-00,
+1190,Dried Kumquat,3.2,Snacks,0000-00-00,0000-00-00,
+1191,Dried Ugni,3.3,Snacks,0000-00-00,0000-00-00,
+1192,Dried Pluot,3.2,Snacks,0000-00-00,0000-00-00,
+1193,Dried Aprium,3.1,Snacks,0000-00-00,0000-00-00,
+1194,Dried Pineberry,3.5,Snacks,0000-00-00,0000-00-00,
+1195,Dried Plumcot,3.1,Snacks,0000-00-00,0000-00-00,
+1196,Dried Greengage,3.2,Snacks,0000-00-00,0000-00-00,
+1197,Dried Mirabelle,3.1,Snacks,0000-00-00,0000-00-00,
+1198,Dried Damson,3.2,Snacks,0000-00-00,0000-00-00,
+1199,Dried Sloe,3.1,Snacks,0000-00-00,0000-00-00,
+1200,Dried Mangaba,3.2,Snacks,0000-00-00,0000-00-00,
+1201,Dried Mundu,3.1,Snacks,0000-00-00,0000-00-00,
+1202,Dried Mabolo,3.3,Snacks,0000-00-00,0000-00-00,
+1203,Dried Sapodilla,3.4,Snacks,0000-00-00,0000-00-00,
+1204,Dried Caimito,3.2,Snacks,0000-00-00,0000-00-00,
+1205,Dried Abiu,3.1,Snacks,0000-00-00,0000-00-00,
+1206,Dried Lucuma,3.2,Snacks,0000-00-00,0000-00-00,
+1207,Dried Camas,3.3,Snacks,0000-00-00,0000-00-00,
+1208,Dried Buffaloberry,3.4,Snacks,0000-00-00,0000-00-00,
+1209,Dried Barberry,3.3,Snacks,0000-00-00,0000-00-00,
+1210,Dried Sea Buckthorn,3.2,Snacks,0000-00-00,0000-00-00,
+1211,Dried Rowanberry,3.1,Snacks,0000-00-00,0000-00-00,
+1212,Dried Shepherdia,3.3,Snacks,0000-00-00,0000-00-00,
+1213,Dried Mayapple,3.2,Snacks,0000-00-00,0000-00-00,
+1214,Dried Aronia Berry,3.1,Snacks,0000-00-00,0000-00-00,
+1215,Dried Chokeberry,3.2,Snacks,0000-00-00,0000-00-00,
+1216,Dried Chokecherry,3.3,Snacks,0000-00-00,0000-00-00,
+1217,Dried Capulin Cherry,3.4,Snacks,0000-00-00,0000-00-00,
+1218,Dried Ground Cherry,3.3,Snacks,0000-00-00,0000-00-00,
+1219,Dried Hackberry,3.2,Snacks,0000-00-00,0000-00-00,
+1220,Dried Huito,3.1,Snacks,0000-00-00,0000-00-00,
+1221,Dried Jabuticaba,3.4,Snacks,0000-00-00,0000-00-00,
+1222,Dried Jostaberry,3.3,Snacks,0000-00-00,0000-00-00,
+1223,Dried Mamey Sapote,3.2,Snacks,0000-00-00,0000-00-00,
+1224,Dried Mammee Apple,3.1,Snacks,0000-00-00,0000-00-00,
+1225,Dried Marula,3.2,Snacks,0000-00-00,0000-00-00,
+1226,Dried Miracle Fruit,3.3,Snacks,0000-00-00,0000-00-00,
+1227,Dried Muscadine,3.2,Snacks,0000-00-00,0000-00-00,
+1228,Dried Nance,3.1,Snacks,0000-00-00,0000-00-00,
+1229,Dried Oil Palm Fruit,3.2,Snacks,0000-00-00,0000-00-00,
+1230,Dried Osage Orange,3.1,Snacks,0000-00-00,0000-00-00,
+1231,Dried Persimmon,3.2,Snacks,0000-00-00,0000-00-00,
+1232,Dried Peumo,3.1,Snacks,0000-00-00,0000-00-00,
+1233,Dried Pindo Palm Fruit,3.2,Snacks,0000-00-00,0000-00-00,
+1234,Dried Pitanga,3.1,Snacks,0000-00-00,0000-00-00,
+1235,Dried Pouteria,3.2,Snacks,0000-00-00,0000-00-00,
+1236,Dried Sapote,3.3,Snacks,0000-00-00,0000-00-00,
+1237,Dried Surinam Cherry,3.2,Snacks,0000-00-00,0000-00-00,
+1238,Dried Tamarillo,3.1,Snacks,0000-00-00,0000-00-00,
+1239,Dried Tejocote,3.2,Snacks,0000-00-00,0000-00-00,
+1240,Dried Umbu,3.1,Snacks,0000-00-00,0000-00-00,
+1241,Dried Voavanga,3.2,Snacks,0000-00-00,0000-00-00,
+1242,Dried Wampi,3.1,Snacks,0000-00-00,0000-00-00,
+1243,Dried Yangmei,3.2,Snacks,0000-00-00,0000-00-00,
+1244,Dried Ziziphus,3.1,Snacks,0000-00-00,0000-00-00,
+1245,Banana,0.3,Fruits,2025-06-17,2025-06-24,
+1246,Carrot,0.2,Vegetables,2025-06-17,2025-06-24,
+1247,Broccoli,0.4,Vegetables,2025-06-17,2025-06-24,
+1248,Chicken Breast,5,Meat,2025-06-17,2025-06-24,
+1249,Salmon Fillet,8,Fish,2025-06-17,2025-06-24,
+1250,Milk,1.2,Dairy,2025-06-17,2025-06-27,
+1251,Cheese,2.5,Dairy,2025-06-17,2025-06-27,
+1252,Bread,1,Bakery,2025-06-17,2025-06-22,Kg
+1253,Rice,0.8,Grains,2025-06-17,2026-06-17,
+1254,Apple,0.5,Fruits,2025-06-17,2025-06-24,
+1255,Banana,0.3,Fruits,2025-06-17,2025-06-24,
+1256,Carrot,0.2,Vegetables,2025-06-17,2025-06-24,
+1257,Broccoli,0.4,Vegetables,2025-06-17,2025-06-24,
+1258,Chicken Breast,5,Meat,2025-06-17,2025-06-24,
+1259,Salmon Fillet,8,Fish,2025-06-17,2025-06-24,
+1260,Milk,1.2,Dairy,2025-06-17,2025-06-27,
+1261,Cheese,2.5,Dairy,2025-06-17,2025-06-27,
+1262,Bread,1,Bakery,2025-06-17,2025-06-22,Kg
+1263,Rice,0.8,Grains,2025-06-17,2026-06-17,
+1264,Apple,0.5,Fruits,2025-06-17,2025-06-24,
